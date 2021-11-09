@@ -5,7 +5,7 @@ import NewCollection from "./components/NewCollection/NewCollection";
 function App() {
   return (
     <div className="App">
-        {/*<Authentication/>*/}
+        <Authentication/>
         {/*<Collections/>*/}
         {/*<NewCollection/>*/}
     </div>
