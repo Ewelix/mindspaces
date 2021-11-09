@@ -1,0 +1,47 @@
+@import '../../sassStyles/colors';
+@import '../../sassStyles/typography';
+@import '../../sassStyles/base';
+
+body {
+  background-color: $main-bgc;
+}
+
+// to edit
+
+.logo {
+  height: 70px;
+}
+
+.auth {
+  padding: 20px;
+  font-family: $main-ff;
+  color: $clr-primary;
+
+  &__title {
+    font-size: 1.375rem;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  input {
+    box-sizing: border-box;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 2px solid $clr-primary;
+  }
+
+  &__logging {
+    display: none;
+  }
+
+  &__register {
+    margin-top: 70px;
+  }
+
+  .btn__register {
+    margin: 0;
+    color: $main-bgc;
+    background: $clr-primary;
+  }
+}

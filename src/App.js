@@ -1,11 +1,13 @@
-import logo from './logo.svg';
 import Authentication from "./components/Authentication/Authentication";
+import Collections from "./components/Collections/Collections";
+import NewCollection from "./components/NewCollection/NewCollection";
 
 function App() {
   return (
     <div className="App">
-        {/*<img src={logo} className="App-logo" alt="logo" />*/}
-        <Authentication/>
+        {/*<Authentication/>*/}
+        {/*<Collections/>*/}
+        {/*<NewCollection/>*/}
     </div>
   );
 }
