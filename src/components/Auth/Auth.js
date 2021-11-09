@@ -5,9 +5,9 @@ import logo from "../../images/flash-cards.png";
 import info from "../../images/info.png";
 
 const Auth = () => {
-    const emailRef = useRef();
-    const passwordRef = useRef();
-    const passwordConfirmRef = useRef();
+    const emailRef = useRef('');
+    const passwordRef = useRef('');
+    const passwordConfirmRef = useRef('');
     const { signup } = useAuth();
     const [error, setError] = useState('');
     const [loading, setLoading] = useState(false);
