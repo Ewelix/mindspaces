@@ -2,6 +2,7 @@ import React, { useRef, useState } from 'react';
 import { useAuth } from "../../contexts/AuthContext";
 import "./Auth.scss";
 import logo from "../../images/flash-cards.png";
+import info from "../../images/info.png";
 
 const Auth = () => {
     const emailRef = useRef();
@@ -56,7 +57,10 @@ const Auth = () => {
                             <label htmlFor="signupConfirmPassword">Password Confirmation</label>
                             <input type="password" id="signupConfirmPassword" placeholder="Password Confirmation" ref={passwordConfirmRef} required/>
                         </div>
-                        {error && <p className="auth__error">{error}</p>}
+                        {error && <div className="auth__error">
+                            <img src={info} alt="Info icon"/>
+                            <span>{error}</span>
+                        </div>}
                         <button disabled={loading} className="btn btn--lg">Sign up</button>
                     </form>
                     <a href="#">Already have an account? Log in</a>

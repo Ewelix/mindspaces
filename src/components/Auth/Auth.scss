@@ -50,6 +50,18 @@ body {
     color: $main-bgc;
     background: $clr-primary;
   }
+
+  &__error {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+    color: #d50606;
+
+    img {
+      margin-right: 10px;
+    }
+  }
 }
 
 //.signup {
