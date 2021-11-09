@@ -1,0 +1,79 @@
+@import '../../sassStyles/colors';
+@import '../../sassStyles/typography';
+@import '../../sassStyles/base';
+
+body {
+  background-color: $clr-blue;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  padding: 15px 0 10px 10px;
+  background: #fff;
+  border-bottom: 1px solid $clr-primary;
+
+  &__title {
+    flex-grow: 1;
+    margin-right: 24px;
+    text-align: center;
+  }
+}
+
+.collection {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 30px 20px;
+
+  &__single {
+    position: relative;
+    flex-basis: calc(50% - 20px);
+    min-height: 180px;
+  }
+
+  &__card {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 15px;
+    font-weight: 600;
+    text-align: center;
+    border: 2px solid $clr-primary;
+    background-color: #fff;
+
+    &--add {
+      color: #fff;
+      font-weight: 400;
+      background: #031d5b;
+    }
+  }
+
+  &__frame {
+    position: absolute;
+    left: 8px;
+    top: 8px;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    border: 2px solid $clr-primary;
+    background-color: $clr-primary;
+  }
+
+  &__add {
+    padding-top: 5px;
+    font-size: 2rem;
+    color: $clr-mandarin;
+  }
+
+  &__remove {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 22px;
+  }
+}
