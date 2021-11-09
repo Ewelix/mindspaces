@@ -1,0 +1,38 @@
+@import '../sassStyles/variables';
+
+* {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $main-ff;
+  color: $clr-primary;
+}
+
+.btn {
+  margin: 10px 0 15px;
+  padding: 10px 30px;
+  background: $clr-accent;
+  //transition: background-color 250ms ease;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.1rem;
+  line-height: 1;
+  letter-spacing: 1px;
+  border: 2px solid $clr-primary;
+}
+
+.btn--lg {
+  width: 100%;
+  padding: 12px 0;
+  color: #031d5b;
+}
+
+.title {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
