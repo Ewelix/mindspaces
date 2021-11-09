@@ -1,14 +1,13 @@
+import React from 'react';
 import "./Collections.scss";
 import logo from "./../../images/flash-cards.png";
 import trash from "./../../images/trash.png";
 
-import React from 'react';
-
 const Collections = () => {
 
-    const handleClick = () => {
-        console.log('klik');
-    }
+    // const handleClick = () => {
+    //     console.log('klik');
+    // }
 
     return (
         <>
@@ -19,7 +18,7 @@ const Collections = () => {
             <div className="collection">
                     <div className="collection__single">
                         <div className="collection__card collection__card--add">Add a new collection
-                            <a className="collection__add" onClick={handleClick}>+</a>
+                            <a href="/" className="collection__add">+</a>
                         </div>
                     </div>
                     <div className="collection__single">

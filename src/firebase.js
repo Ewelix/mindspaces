@@ -1,5 +1,4 @@
 import firebase from "firebase/app";
-// import { getAnalytics } from "firebase/analytics";
 import "firebase/auth";
 
 const app = firebase.initializeApp({

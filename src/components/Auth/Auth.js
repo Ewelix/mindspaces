@@ -24,6 +24,7 @@ const Auth = () => {
             setLoading(true);
            await signup(emailRef.current.value, passwordRef.current.value)
         } catch {
+            console.log(error);
             setError('Failed to create an account')
         }
         setLoading(false);
@@ -36,26 +37,39 @@ const Auth = () => {
                 <div className="auth__signin">
                     <h2 className="auth__title">Witaj ponownie</h2>
                     <form action="">
-                        <input type="email" placeholder="E-mail" ref={emailRef} required/>
-                        <input type="password" placeholder="Password" ref={passwordRef} required/>
+                        <input type="email" placeholder="E-mail" required/>
+                        <input type="password" placeholder="Password" required/>
                         <button className="btn btn--lg">Log in</button>
                     </form>
-                    <a href="#">Zapomniałeś hasła?</a>
+                    <a href="/">Zapomniałeś hasła?</a>
                 </div>
                 <div className="auth__signup">
                     <h2 className="auth__title">Sign up</h2>
                     <form action="" className="signup" onSubmit={handleSubmit}>
                         <div className="signup__group">
                             <label htmlFor="signupEmail">E-mail address</label>
-                            <input type="email" id="signupEmail" placeholder="E-mail address" ref={emailRef} required/>
+                            <input type="email"
+                                   id="signupEmail"
+                                   placeholder="E-mail address"
+                                   ref={emailRef}
+                                   required/>
                         </div>
                         <div className="signup__group">
                             <label htmlFor="signupPassword">Password</label>
-                            <input type="password" id="signupPassword" placeholder="Password" ref={passwordRef} required/>
+                            <input type="password"
+                                   id="signupPassword"
+                                   placeholder="Password"
+                                   ref={passwordRef}
+                                   required/>
                         </div>
                         <div className="signup__group">
                             <label htmlFor="signupConfirmPassword">Password Confirmation</label>
-                            <input type="password" id="signupConfirmPassword" placeholder="Password Confirmation" ref={passwordConfirmRef} required/>
+                            <input
+                                type="password"
+                                id="signupConfirmPassword"
+                                placeholder="Password Confirmation"
+                                ref={passwordConfirmRef}
+                                required/>
                         </div>
                         {error && <div className="auth__error">
                             <img src={info} alt="Info icon"/>
@@ -63,7 +77,7 @@ const Auth = () => {
                         </div>}
                         <button disabled={loading} className="btn btn--lg">Sign up</button>
                     </form>
-                    <a href="#">Already have an account? Log in</a>
+                    <a href="/">Already have an account? Log in</a>
                 </div>
             </div>
         </>
