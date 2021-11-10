@@ -8,6 +8,7 @@ import Login from "./components/Login/Login";
 import Profile from "./components/Profile/Profile";
 import PrivateRoute from "./PrivateRoute";
 import ForgotPassword from "./components/ForgotPassword/ForgotPassword";
+import UpdateProfile from "./components/UpdateProfile/UpdateProfile";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <HashRouter>
                 <AuthProvider>
                     <PrivateRoute exact path="/" component={Dashboard}/>
+                    <PrivateRoute path="update-profile" component={UpdateProfile}/>
                     <Route path="/signup" component={Signup}/>
                     <Route path="/login" component={Login}/>
                     <Route path="/profile" component={Profile}/>
