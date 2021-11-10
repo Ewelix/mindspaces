@@ -18,13 +18,17 @@ const Account = () => {
                 <Link to="/"><img src={close} alt="Info icon"/></Link>
             </nav>
             <section className="account">
-                <div className="account__title">Profile details</div>
-                <div className="account__content">
-                    <strong>Email: </strong>
-                    {currentUser.email}
+                <div className="account__container">
+                    <div className="account__title">Profile details</div>
+                    <div className="account__content">
+                        <strong>Email: </strong>
+                        {currentUser.email}
+                    </div>
+                    <Link to="/update-profile" className="account__btn btn">Update profile</Link>
                 </div>
-                <Link to="/update-profile" className="account__btn btn">Update profile</Link>
+                <div className="account__frame frame"/>
             </section>
+
         </>
     );
 };

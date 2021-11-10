@@ -7,11 +7,18 @@ body {
 }
 
 .account {
-  width: 90%;
-  margin: 30px auto 0;
-  background: #fff;
-  padding: 20px;
-  border: 2px solid $clr-accent;
+  position: relative;
+
+
+  &__container {
+    position: relative;
+    z-index: 3;
+    width: 90%;
+    margin: 30px auto 0;
+    background: #fff;
+    padding: 20px;
+    border: 2px solid $clr-primary;
+  }
 
   &__title {
     padding: 20px 0;
@@ -31,5 +38,11 @@ body {
     text-decoration: none;
     text-align: center;
     background: $clr-accent;
+  }
+
+  &__frame {
+    left: 12px;
+    width: 90%;
+    background: $clr-primary;
   }
 }

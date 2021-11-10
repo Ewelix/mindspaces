@@ -21,14 +21,14 @@ const Collections = () => {
                             <img src={trash} className="collection__remove" alt="trash icon" />
                             <span>React</span>
                         </div>
-                        <div className="collection__frame"/>
+                        <div className="collection__frame frame"/>
                     </div>
                     <div className="collection__single">
                         <div className="collection__card">
                             <img src={trash} className="collection__remove" alt="trash icon" />
                             <span>Sass</span>
                         </div>
-                        <div className="collection__frame"/>
+                        <div className="collection__frame frame"/>
                     </div>
             </div>
         </>
