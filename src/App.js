@@ -9,6 +9,7 @@ import Account from "./components/Account/Account";
 import PrivateRoute from "./PrivateRoute";
 import ForgotPassword from "./components/ForgotPassword/ForgotPassword";
 import UpdateProfile from "./components/UpdateProfile/UpdateProfile";
+import NewCollection from "./components/NewCollection/NewCollection";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
                     <Route path="/login" component={Login}/>
                     <PrivateRoute path="/account" component={Account}/>
                     <Route path="/forgot-password" component={ForgotPassword}/>
+                    <Route path="/new-collection" component={NewCollection}/>
                 </AuthProvider>
         </HashRouter>
     </div>

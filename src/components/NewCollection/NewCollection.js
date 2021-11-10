@@ -1,14 +1,17 @@
 import React from 'react';
 import "./NewCollection.scss";
+import { Link } from "react-router-dom";
+import arrow from "../../images/left-arrow.png";
 
 const NewCollection = () => {
     return (
         <div>
             <nav className="nav">
                 <ul className="nav__list">
-                    <li>X</li>
+                    <Link to="/"><img src={arrow} alt="Info icon"/></Link>
                     <li className="title">New collection</li>
                     <li className="ok">OK</li>
+
                 </ul>
             </nav>
             <form className="form">
