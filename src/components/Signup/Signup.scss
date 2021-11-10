@@ -3,7 +3,7 @@
 @import '../../sassStyles/base';
 
 body {
-  background-color: $main-bgc;
+  background-color: $clr-accent;
 }
 
 // to edit
@@ -41,10 +41,6 @@ body {
     font-weight: 600;
   }
 
-  &__signin {
-    display: none;
-  }
-
   .btn__register {
     margin: 0;
     color: $main-bgc;
@@ -63,7 +59,3 @@ body {
     }
   }
 }
-
-//.signup {
-//
-//}

@@ -3,6 +3,7 @@ import { useAuth } from "../../contexts/AuthContext";
 import "./Signup.scss";
 import logo from "../../images/flash-cards.png";
 import info from "../../images/info.png";
+import {Link} from "react-router-dom";
 
 const Signup = () => {
     const emailRef = useRef('');
@@ -34,15 +35,6 @@ const Signup = () => {
         <>
             <img src={logo} className="App-logo" alt="logo" />
             <div className="auth">
-                <div className="auth__signin">
-                    <h2 className="auth__title">Witaj ponownie</h2>
-                    <form action="">
-                        <input type="email" placeholder="E-mail" required/>
-                        <input type="password" placeholder="Password" required/>
-                        <button className="btn btn--lg">Log in</button>
-                    </form>
-                    <a href="/">Zapomniałeś hasła?</a>
-                </div>
                 <div className="auth__signup">
                     <h2 className="auth__title">Sign up</h2>
                     <form action="" className="signup" onSubmit={handleSubmit}>
@@ -77,7 +69,7 @@ const Signup = () => {
                         </div>}
                         <button disabled={loading} className="btn btn--lg">Sign up</button>
                     </form>
-                    <a href="/">Already have an account? Log in</a>
+                    <div>Already have an account? <Link to="/login">Log up</Link></div>
                 </div>
             </div>
         </>
