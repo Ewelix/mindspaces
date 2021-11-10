@@ -1,25 +1,30 @@
 import React from 'react';
+import "./Account.scss";
 import { useAuth } from "../../contexts/AuthContext";
-import info from "../../images/info.png";
-import {Link, useHistory} from "react-router-dom";
+import { Link } from "react-router-dom";
+import arrow from "../../images/left-arrow.png";
+import close from "../../images/close.png";
 
 const Account = () => {
     const { currentUser } = useAuth();
-    const history = useHistory();
 
     return (
         <>
             <div>
-                <nav className="nav">Your profile</nav>
+                <nav className="nav">
+                    <h4>Your profile</h4>
+                    <Link to="/"><img src={close} alt="Info icon"/></Link>
+                </nav>
             </div>
-            <section>
-                <div>
-                    <span>Email:{currentUser.email}</span>
+            <section className="account">
+                <div className="account__title">Profile details</div>
+                <div className="account__content">
+                    <strong>Email: </strong>
+                    {currentUser.email}
                 </div>
-                <Link to="/update-profile" className="btn">Update profile</Link>
+                <Link to="/update-profile" className="account__btn btn">Update profile</Link>
             </section>
         </>
-
     );
 };
 
