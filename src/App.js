@@ -1,4 +1,4 @@
-import Auth from "./components/Auth/Auth";
+import Dashboard from "./components/Dashboard/Dashboard";
 import { AuthProvider } from "./contexts/AuthContext";
 import { HashRouter,
     Route
@@ -11,7 +11,7 @@ function App() {
     <div className="App">
         <HashRouter>
                 <AuthProvider>
-                    <Route exact path="/" component={Auth}/>
+                    <Route exact path="/" component={Dashboard}/>
                     <Route path="/signup" component={Signup}/>
                     <Route path="/login" component={Login}/>
                 </AuthProvider>
