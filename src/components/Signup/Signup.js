@@ -3,7 +3,7 @@ import { useAuth } from "../../contexts/AuthContext";
 import "./Signup.scss";
 import logo from "../../images/flash-cards.png";
 import info from "../../images/info.png";
-import {Link} from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 const Signup = () => {
     const emailRef = useRef('');
@@ -12,6 +12,7 @@ const Signup = () => {
     const { signup } = useAuth();
     const [error, setError] = useState('');
     const [loading, setLoading] = useState(false);
+    const history = useHistory();
 
     async function handleSubmit(e) {
         e.preventDefault();
@@ -23,9 +24,9 @@ const Signup = () => {
         try {
             setError('');
             setLoading(true);
-            await signup(emailRef.current.value, passwordRef.current.value)
+            await signup(emailRef.current.value, passwordRef.current.value);
+            history.push("/");
         } catch {
-            console.log(error);
             setError('Failed to create an account')
         }
         setLoading(false);
@@ -69,7 +70,7 @@ const Signup = () => {
                         </div>}
                         <button disabled={loading} className="btn btn--lg">Sign up</button>
                     </form>
-                    <div>Already have an account? <Link to="/login">Log up</Link></div>
+                    <div>Already have an account? <Link to="/login">Log in</Link></div>
                 </div>
             </div>
         </>
