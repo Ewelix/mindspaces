@@ -7,7 +7,7 @@ import Signup from "./components/Signup/Signup";
 import Login from "./components/Login/Login";
 import Profile from "./components/Profile/Profile";
 import PrivateRoute from "./PrivateRoute";
-import Collections from "./components/Collections/Collections";
+import ForgotPassword from "./components/ForgotPassword/ForgotPassword";
 
 function App() {
   return (
@@ -18,14 +18,12 @@ function App() {
                     <Route path="/signup" component={Signup}/>
                     <Route path="/login" component={Login}/>
                     <Route path="/profile" component={Profile}/>
+                    <Route path="/forgot-password" component={ForgotPassword}/>
                 </AuthProvider>
         </HashRouter>
 
 
-        {/*<small className="icons-credits">Icons made by*/}
-        {/*    <a href="https://www.freepik.com" title="Freepik"> Freepik </a>*/}
-        {/*    from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>*/}
-        {/*</small>*/}
+
     </div>
   );
 }

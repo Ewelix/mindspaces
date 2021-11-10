@@ -1,28 +1,27 @@
 import React, { useRef, useState } from 'react';
-import { Link, useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useAuth } from "../../contexts/AuthContext";
-import "./Login.scss";
 import info from "../../images/info.png";
+import check from "../../images/check.png";
 
-const Login = () => {
+const ForgotPassword = () => {
     const emailRef = useRef('');
-    const passwordRef = useRef('');
-    const { login } = useAuth();
+    const { passwordReset } = useAuth();
     const [error, setError] = useState('');
     const [loading, setLoading] = useState(false);
-    const history = useHistory();
+    const [message, setMessage] = useState('');
 
     const handleSubmit = async (e) => {
         e.preventDefault();
 
         try {
+            setMessage('');
             setError('');
             setLoading(true);
-            await login(emailRef.current.value, passwordRef.current.value);
-            history.push("/");
+            await passwordReset(emailRef.current.value);
+            setMessage('Check your inbox for further instructions')
         } catch {
-            console.log(error);
-            setError('Failed to log in')
+            setError('Failed to reset password')
         }
         setLoading(false);
     }
@@ -31,7 +30,7 @@ const Login = () => {
         <>
             <div className="auth">
                 <div className="auth__signin">
-                    <h2 className="auth__title">Log in</h2>
+                    <h2 className="auth__title">Password Reset</h2>
                     <form action="" className="login" onSubmit={handleSubmit}>
                         <div className="signup__group">
                             <label htmlFor="signupEmail">E-mail address</label>
@@ -41,22 +40,18 @@ const Login = () => {
                                    ref={emailRef}
                                    required/>
                         </div>
-                        <div className="signup__group">
-                            <label htmlFor="signupPassword">Password</label>
-                            <input type="password"
-                                   id="signupPassword"
-                                   placeholder="Password"
-                                   ref={passwordRef}
-                                   required/>
-                        </div>
 
                         {error && <div className="auth__error">
                             <img src={info} alt="Info icon"/>
                             <span>{error}</span>
                         </div>}
-                        <Link to="/forgot-password">Forgot Password?</Link>
-                        <button disabled={loading} className="btn btn--lg">Log in</button>
+                        {message && <div className="auth__success">
+                            <img src={check} alt="Check icon"/>
+                            <span>{message}</span>
+                        </div>}
+                        <button disabled={loading} className="btn btn--lg">Reset Password</button>
                     </form>
+                    <Link to="/login">Log in</Link>
                     <div>Need an account? <Link to="/signup">Sign up</Link></div>
                 </div>
             </div>
@@ -64,4 +59,4 @@ const Login = () => {
     );
 };
 
-export default Login;
+export default ForgotPassword;

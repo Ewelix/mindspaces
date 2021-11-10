@@ -47,7 +47,8 @@ body {
     background: $clr-primary;
   }
 
-  &__error {
+  &__error,
+  &__success {
     display: flex;
     align-items: center;
     margin-bottom: 15px;
@@ -57,5 +58,10 @@ body {
     img {
       margin-right: 10px;
     }
+  }
+
+  &__success {
+    font-weight: 600;
+    color: #077057;
   }
 }
