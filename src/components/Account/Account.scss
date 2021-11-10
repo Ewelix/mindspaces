@@ -3,7 +3,7 @@
 @import '../../sassStyles/base';
 
 body {
-  background-color: $main-bgc !important;
+  //background-color: $main-bgc !important;
 }
 
 .account {
@@ -11,6 +11,7 @@ body {
   margin: 30px auto 0;
   background: #fff;
   padding: 20px;
+  border: 2px solid $clr-accent;
 
   &__title {
     padding: 20px 0;

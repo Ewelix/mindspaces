@@ -2,20 +2,21 @@ import React from 'react';
 import "./Account.scss";
 import { useAuth } from "../../contexts/AuthContext";
 import { Link } from "react-router-dom";
-import arrow from "../../images/left-arrow.png";
 import close from "../../images/close.png";
+import user from "../../images/user.png";
 
 const Account = () => {
     const { currentUser } = useAuth();
 
     return (
         <>
-            <div>
-                <nav className="nav">
-                    <h4>Your profile</h4>
-                    <Link to="/"><img src={close} alt="Info icon"/></Link>
-                </nav>
-            </div>
+            <nav className="nav">
+                <Link to="/account">
+                    <img src={user} alt="User icon" />
+                </Link>
+                <h4 className="nav__title">Account</h4>
+                <Link to="/"><img src={close} alt="Info icon"/></Link>
+            </nav>
             <section className="account">
                 <div className="account__title">Profile details</div>
                 <div className="account__content">

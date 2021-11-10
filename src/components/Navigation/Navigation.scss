@@ -9,6 +9,7 @@ body {
 .nav {
   display: flex;
   flex-direction: row;
+  align-items: end;
   justify-content: space-between;
   padding: 15px 20px;
   background: #fff;
@@ -17,6 +18,13 @@ body {
   &__title {
     flex-grow: 1;
     margin-right: 24px;
+    padding-bottom: 2px;
+    font-weight: 500;
+    color: $clr-blue;
     text-align: center;
+  }
+
+  img {
+    max-width: 20px;
   }
 }

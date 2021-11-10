@@ -31,7 +31,7 @@ const Navigation = () => {
                 <img src={info} alt="Info icon"/>
                 <span>{error}</span>
             </div>}
-            <h4>{currentUser.email}</h4>
+            <h4 className="nav__title">Collections</h4>
             {/*<h1 className="nav__title title">Your collections</h1>*/}
             <a href="/" onClick={handleLogout}>
                 <img src={leave} className="App-logo" alt="logo" />
