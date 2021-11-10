@@ -2,24 +2,6 @@
 @import '../../sassStyles/typography';
 @import '../../sassStyles/base';
 
-body {
-  background-color: $clr-blue;
-}
-
-.nav {
-  display: flex;
-  flex-direction: row;
-  padding: 15px 0 10px 10px;
-  background: #fff;
-  border-bottom: 1px solid $clr-primary;
-
-  &__title {
-    flex-grow: 1;
-    margin-right: 24px;
-    text-align: center;
-  }
-}
-
 .collection {
   display: flex;
   flex-wrap: wrap;

@@ -1,7 +1,6 @@
 import React, { useRef, useState } from 'react';
 import { useAuth } from "../../contexts/AuthContext";
 import "./Signup.scss";
-import logo from "../../images/flash-cards.png";
 import info from "../../images/info.png";
 import { Link, useHistory } from "react-router-dom";
 
@@ -34,7 +33,6 @@ const Signup = () => {
 
     return (
         <>
-            <img src={logo} className="App-logo" alt="logo" />
             <div className="auth">
                 <div className="auth__signup">
                     <h2 className="auth__title">Sign up</h2>

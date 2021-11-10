@@ -1,0 +1,22 @@
+@import '../../sassStyles/colors';
+@import '../../sassStyles/typography';
+@import '../../sassStyles/base';
+
+body {
+  background-color: $clr-blue;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 15px 20px;
+  background: #fff;
+  border-bottom: 1px solid $clr-primary;
+
+  &__title {
+    flex-grow: 1;
+    margin-right: 24px;
+    text-align: center;
+  }
+}

@@ -1,7 +1,6 @@
 import React from 'react';
 import "./Collections.scss";
-import logo from "./../../images/flash-cards.png";
-import trash from "./../../images/trash.png";
+import trash from "./../../images/delete.png";
 
 const Collections = () => {
 
@@ -11,10 +10,6 @@ const Collections = () => {
 
     return (
         <>
-            <nav className="nav">
-                <img src={logo} className="App-logo" alt="logo" />
-                <h1 className="nav__title title">Your collections</h1>
-            </nav>
             <div className="collection">
                     <div className="collection__single">
                         <div className="collection__card collection__card--add">Add a new collection

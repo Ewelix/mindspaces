@@ -5,6 +5,7 @@ import { HashRouter,
 } from "react-router-dom";
 import Signup from "./components/Signup/Signup";
 import Login from "./components/Login/Login";
+import Collections from "./components/Collections/Collections";
 
 function App() {
   return (

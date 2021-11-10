@@ -2,7 +2,6 @@ import React, { useRef, useState } from 'react';
 import { Link, useHistory } from "react-router-dom";
 import { useAuth } from "../../contexts/AuthContext";
 import "./Login.scss";
-import logo from "../../images/flash-cards.png";
 import info from "../../images/info.png";
 
 const Login = () => {
@@ -30,7 +29,6 @@ const Login = () => {
 
     return (
         <>
-            <img src={logo} className="App-logo" alt="logo" />
             <div className="auth">
                 <div className="auth__signin">
                     <h2 className="auth__title">Log in</h2>
