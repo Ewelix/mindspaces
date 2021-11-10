@@ -1,0 +1,69 @@
+@import '../../sassStyles/colors';
+@import '../../sassStyles/typography';
+@import '../../sassStyles/base';
+
+body {
+  background-color: $main-bgc;
+}
+
+// to edit
+
+.logo {
+  height: 70px;
+}
+
+.auth {
+  max-width: 400px;
+  margin: 40px auto 0;
+  padding: 20px;
+  font-family: $main-ff;
+  color: $clr-primary;
+
+  &__title {
+    padding: 20px 0;
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+  }
+
+  input {
+    box-sizing: border-box;
+    width: 100%;
+    margin: 8px 0 15px;
+    padding: 10px;
+    font-family: $main-ff;
+    font-size: 0.75rem;
+    border: 2px solid $clr-primary;
+  }
+
+  label {
+    font-weight: 600;
+  }
+
+  &__signin {
+    display: none;
+  }
+
+  .btn__register {
+    margin: 0;
+    color: $main-bgc;
+    background: $clr-primary;
+  }
+
+  &__error {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+    color: #d50606;
+
+    img {
+      margin-right: 10px;
+    }
+  }
+}
+
+//.signup {
+//
+//}

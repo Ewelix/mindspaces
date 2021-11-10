@@ -1,12 +1,22 @@
 import Auth from "./components/Auth/Auth";
 import { AuthProvider } from "./contexts/AuthContext";
+import { HashRouter,
+    Route
+} from "react-router-dom";
+import Signup from "./components/Signup/Signup";
+import Login from "./components/Login/Login";
 
 function App() {
   return (
     <div className="App">
-        <AuthProvider>
-            <Auth/>
-        </AuthProvider>
+        <HashRouter>
+                <AuthProvider>
+                    <Route exact path="/" component={Auth}/>
+                    <Route path="/signup" component={Signup}/>
+                    <Route path="/login" component={Login}/>
+                </AuthProvider>
+        </HashRouter>
+
 
         {/*<small className="icons-credits">Icons made by*/}
         {/*    <a href="https://www.freepik.com" title="Freepik"> Freepik </a>*/}
