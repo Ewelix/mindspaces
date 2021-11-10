@@ -4,7 +4,7 @@ import "./Dashboard.scss";
 import user from "../../images/user.png";
 import leave from "../../images/log-out.png";
 import { useAuth } from "../../contexts/AuthContext";
-import { useHistory } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import info from "../../images/info.png";
 
 
@@ -27,7 +27,9 @@ const Dashboard = () => {
     return (
         <>
             <nav className="nav">
-                <img src={user} className="App-logo" alt="logo" />
+                <Link to="/profile">
+                    <img src={user} className="App-logo" alt="logo" />
+                </Link>
                 {error && <div className="auth__error">
                     <img src={info} alt="Info icon"/>
                     <span>{error}</span>

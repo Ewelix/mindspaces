@@ -5,6 +5,8 @@ import { HashRouter,
 } from "react-router-dom";
 import Signup from "./components/Signup/Signup";
 import Login from "./components/Login/Login";
+import Profile from "./components/Profile/Profile";
+import PrivateRoute from "./PrivateRoute";
 import Collections from "./components/Collections/Collections";
 
 function App() {
@@ -12,9 +14,10 @@ function App() {
     <div className="App">
         <HashRouter>
                 <AuthProvider>
-                    <Route exact path="/" component={Dashboard}/>
+                    <PrivateRoute exact path="/" component={Dashboard}/>
                     <Route path="/signup" component={Signup}/>
                     <Route path="/login" component={Login}/>
+                    <Route path="/profile" component={Profile}/>
                 </AuthProvider>
         </HashRouter>
 
