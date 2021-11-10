@@ -7,7 +7,6 @@ import { useAuth } from "../../contexts/AuthContext";
 import { Link, useHistory } from "react-router-dom";
 import info from "../../images/info.png";
 
-
 const Dashboard = () => {
     const [error, setError] = useState('');
     const { currentUser, logout } = useAuth();
@@ -27,7 +26,7 @@ const Dashboard = () => {
     return (
         <>
             <nav className="nav">
-                <Link to="/profile">
+                <Link to="/account">
                     <img src={user} className="App-logo" alt="logo" />
                 </Link>
                 {error && <div className="auth__error">

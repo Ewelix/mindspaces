@@ -33,7 +33,7 @@ const UpdateProfile = () => {
 
         Promise.all(promises)
             .then(() => {
-                history.push("/profile");
+                history.push("/account");
             })
             .catch(() => {
                 setError("Failed to update account");
@@ -79,7 +79,7 @@ const UpdateProfile = () => {
                         </div>}
                         <button disabled={loading} className="btn btn--lg">Update</button>
                     </form>
-                    <Link to="/Profile">Cancel</Link>
+                    <Link to="/account">Cancel</Link>
                 </div>
             </div>
         </>

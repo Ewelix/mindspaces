@@ -5,7 +5,7 @@ import { HashRouter,
 } from "react-router-dom";
 import Signup from "./components/Signup/Signup";
 import Login from "./components/Login/Login";
-import Profile from "./components/Profile/Profile";
+import Account from "./components/Account/Account";
 import PrivateRoute from "./PrivateRoute";
 import ForgotPassword from "./components/ForgotPassword/ForgotPassword";
 import UpdateProfile from "./components/UpdateProfile/UpdateProfile";
@@ -16,16 +16,13 @@ function App() {
         <HashRouter>
                 <AuthProvider>
                     <PrivateRoute exact path="/" component={Dashboard}/>
-                    <PrivateRoute path="update-profile" component={UpdateProfile}/>
+                    <PrivateRoute path="/update-profile" component={UpdateProfile}/>
                     <Route path="/signup" component={Signup}/>
                     <Route path="/login" component={Login}/>
-                    <Route path="/profile" component={Profile}/>
+                    <PrivateRoute path="/account" component={Account}/>
                     <Route path="/forgot-password" component={ForgotPassword}/>
                 </AuthProvider>
         </HashRouter>
-
-
-
     </div>
   );
 }
