@@ -10,7 +10,11 @@ const Collections = () => {
     useEffect(() => {
         db.collection("flashcards-collection").onSnapshot((snapshot) => {
             setCardTitles(
-                snapshot.docs.map((doc) => doc.data().title)
+                snapshot.docs.map((doc) => ({
+                    id: doc.id,
+                    title: doc.data().title
+                }))
+
             );
         });
     }, []);
@@ -25,11 +29,11 @@ const Collections = () => {
                         </div>
                     </div>
 
-                {cardTitles.map(title => {
-                    return <div className="collection__single" key={cardTitles.id}>
+                {cardTitles.map(cardTitle => {
+                    return <div className="collection__single" key={cardTitle.id}>
                                 <div className="collection__card">
                                     <img src={trash} className="collection__remove" alt="trash icon" />
-                                    <span>{title}</span>
+                                    <span>{cardTitle.title}</span>
                                 </div>
                             <div className="collection__frame frame"/>
                         </div>
