@@ -38,8 +38,11 @@ const Collections = () => {
                 {cardTitles.map(cardTitle => {
                     return <div className="collection__single" key={cardTitle.id}>
                                 <div className="collection__card">
-                                    <img src={trash} className="collection__remove" onClick={() => handleRemove(cardTitle.id)} alt="trash icon" />
-                                    <span>{cardTitle.title}</span>
+                                    <img
+                                        src={trash}
+                                        className="collection__remove"
+                                        onClick={() => handleRemove(cardTitle.id)} alt="trash icon" />
+                                    <Link to="/add-flashcard">{cardTitle.title}</Link>
                                 </div>
                             <div className="collection__frame frame"/>
                         </div>
