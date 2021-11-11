@@ -19,6 +19,12 @@ const Collections = () => {
         });
     }, []);
 
+    const handleRemove = (id) => {
+        db.collection("flashcards-collection").doc(id).delete()
+            .then(function () {console.log("Value successfully remove!");})
+            .catch(function (error) {console.error("Error removing Value: ", error);});
+    }
+
     return (
         <>
             <div className="collection">
@@ -32,7 +38,7 @@ const Collections = () => {
                 {cardTitles.map(cardTitle => {
                     return <div className="collection__single" key={cardTitle.id}>
                                 <div className="collection__card">
-                                    <img src={trash} className="collection__remove" alt="trash icon" />
+                                    <img src={trash} className="collection__remove" onClick={() => handleRemove(cardTitle.id)} alt="trash icon" />
                                     <span>{cardTitle.title}</span>
                                 </div>
                             <div className="collection__frame frame"/>
