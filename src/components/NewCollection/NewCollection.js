@@ -3,7 +3,6 @@ import "./NewCollection.scss";
 import { Link, useHistory } from "react-router-dom";
 import arrow from "../../images/left-arrow.png";
 import  { db } from "../../firebase";
-import SingleCard from "../SingleCard/SingleCard";
 
 const NewCollection = () => {
     const [collectionTitle, setCollectionTitle] = useState('');
@@ -21,7 +20,7 @@ const NewCollection = () => {
 
     const handleClick = () => {
         console.log('klik');
-        return <SingleCard/>
+        // return <Card/>
     //    1. wyslanie danych do cards
     //    2. wyswietlenie nowej czystej karty
     }
@@ -60,15 +59,12 @@ const NewCollection = () => {
                     <input
                         type="text"
                         id="collection-title"
-                        placeholder="Nazwa zestawu"
                         value={collectionTitle}
                         onChange={(e) => setCollectionTitle(e.target.value)}/>
-                    <label htmlFor="collection-title">Nazwa zestawu</label>
+                    <label htmlFor="collection-title">Set title</label>
                 </div>
-                <SingleCard/>
-                {/* po kliku karta laduje w cards array */}
-                <a className="form__add btn btn--lg" onClick={handleClick}>Add a new card</a>
-                <button className="ok" type="submit" on>OK</button>
+
+                <button className="ok btn btn--lg" type="submit" on>Save </button>
             </form>
         </div>
     );

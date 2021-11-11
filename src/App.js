@@ -10,6 +10,7 @@ import PrivateRoute from "./PrivateRoute";
 import ForgotPassword from "./components/ForgotPassword/ForgotPassword";
 import UpdateProfile from "./components/UpdateProfile/UpdateProfile";
 import NewCollection from "./components/NewCollection/NewCollection";
+import AddFlashcard from "./components/AddFlashcard/AddFlashcard";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
                     <PrivateRoute path="/account" component={Account}/>
                     <Route path="/forgot-password" component={ForgotPassword}/>
                     <Route path="/new-collection" component={NewCollection}/>
+                    <Route path="/add-flashcard" component={AddFlashcard}/>
                 </AuthProvider>
         </HashRouter>
     </div>
