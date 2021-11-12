@@ -34,7 +34,8 @@ const NewCollection = () => {
 
         db.collection("flashcards-collection")
             .add({
-            title: collectionTitle,
+                title: collectionTitle,
+                cards: []
         })
             .then(function () {console.log("Value successfully written!");})
             .catch(function (error) {console.error("Error writing Value: ", error);});

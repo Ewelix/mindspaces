@@ -12,15 +12,16 @@ const Collections = () => {
             setCardTitles(
                 snapshot.docs.map((doc) => ({
                     id: doc.id,
-                    title: doc.data().title
+                    title: doc.data().title,
                 }))
-
             );
         });
     }, []);
 
     const handleRemove = (id) => {
-        db.collection("flashcards-collection").doc(id).delete()
+        db.collection("flashcards-collection")
+            .doc(id)
+            .delete()
             .then(function () {console.log("Value successfully remove!");})
             .catch(function (error) {console.error("Error removing Value: ", error);});
     }

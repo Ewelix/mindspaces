@@ -8,18 +8,18 @@ const Set = ({ match }) => {
     const [cardFronts, setCardFronts] = useState([]);
 
     useEffect(() => {
-        const docRef = db.collection("flashcards-collection").doc(match.params.id);
+        const docRef = db
+            .collection("flashcards-collection")
+            .doc(match.params.id);
 
         docRef
             .get()
             .then((doc) => {
                 if (doc.exists) {
-                    console.log("Document data:", doc.data());
                     setCardFronts((state) => [
                                 ...state,
                                 {
                                     ...doc.data(),
-                                    id: doc.id
                                 }
                             ])
                 } else {
@@ -40,14 +40,14 @@ const Set = ({ match }) => {
                     </div>
                 </div>
 
-                {cardFronts.map(cardFront => {
-                    return <div className="collection__single">
+                {cardFronts.length && cardFronts[0].cards.map((card, i) => {
+                    return <div className="collection__single" key={i}>
                                 <div className="collection__card">
                                     <img
                                         src={trash}
                                         className="collection__remove"
                                         alt="trash icon" />
-                                    <Link to="/add-flashcard">{cardFront.cards.card.front}</Link>
+                                    <Link to="/add-flashcard">{card.front}</Link>
                                 </div>
                             <div className="collection__frame frame"/>
                         </div>
