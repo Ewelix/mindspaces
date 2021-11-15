@@ -12,7 +12,8 @@ body {
   align-items: end;
   justify-content: space-between;
   padding: 15px 20px;
-  background: #fff;
+  background: #031d5b;
+  color: $main-bgc;
   border-bottom: 2px solid $clr-primary;
 
   &__title {
@@ -20,7 +21,6 @@ body {
     margin-right: 24px;
     padding-bottom: 2px;
     font-weight: 500;
-    color: $clr-primary;
     text-align: center;
   }
 
@@ -31,7 +31,6 @@ body {
   &__button {
     color: $clr-mandarin;
     font-size: 1.1rem;
-    font-weight: 600;
     text-decoration: none;
   }
 }

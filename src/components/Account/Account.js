@@ -2,8 +2,8 @@ import React from 'react';
 import "./Account.scss";
 import { useAuth } from "../../contexts/AuthContext";
 import { Link } from "react-router-dom";
-import close from "../../images/close.png";
-import user from "../../images/user.png";
+import close from "../../images/close-orange.png";
+import user from "../../images/profile.png";
 
 const Account = () => {
     const { currentUser } = useAuth();

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import "./Navigation.scss";
-import user from "../../images/user.png";
+import user from "../../images/profile.png";
 import leave from "../../images/log-out.png";
 import { useAuth } from "../../contexts/AuthContext";
 import { Link, useHistory } from "react-router-dom";
