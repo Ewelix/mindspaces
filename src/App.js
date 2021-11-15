@@ -12,6 +12,7 @@ import UpdateProfile from "./components/UpdateProfile/UpdateProfile";
 import NewCollection from "./components/NewCollection/NewCollection";
 import Set from "./components/Set/Set";
 import AddFlashcard from "./components/AddFlashcard/AddFlashcard";
+import Learning from "./components/Learning/Learning";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
                     <Route path="/new-collection" component={NewCollection}/>
                     <Route path="/set/:id" component={Set}/>
                     <Route path="/add-flashcard/:id" component={AddFlashcard}/>
+                    <Route path="/learning" component={Learning}/>
                 </AuthProvider>
         </HashRouter>
     </div>

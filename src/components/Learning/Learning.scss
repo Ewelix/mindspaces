@@ -1,0 +1,85 @@
+@import '../../sassStyles/colors';
+@import '../../sassStyles/typography';
+@import '../../sassStyles/base';
+
+.learning {
+  height: 100vh;
+  background: $clr-primary;
+
+  &__nav {
+    background: none;
+    border-bottom: 2px solid darkblue;
+  }
+
+  &__set {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    min-height: 400px;
+    padding: 30px 20px;
+  }
+
+  &__single {
+    position: relative;
+    flex-basis: 90%;
+    min-height: 400px;
+  }
+
+  &__card {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    //justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-weight: 600;
+    text-align: center;
+    border: 3px solid $clr-primary;
+    background-color: #fff;
+  }
+
+  &__counter {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.2rem;
+    background: rgb(254, 134, 112);
+    border-bottom: 3px solid $clr-primary;
+  }
+
+  &__content {
+    padding: 15px;
+  }
+
+  &__title {
+    flex-grow: 1;
+    text-decoration: none;
+  }
+
+  &__frame {
+    width: 100%;
+    border: 2px solid $clr-blue;
+    background-color: $clr-blue;
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    width: 100%;
+    margin: 20px 0 0 10px;
+  }
+
+  &__button {
+    padding: 10px 15px;
+    color: #fff;
+    font-weight: 500;
+    text-decoration: none;
+
+    &:nth-child(2) {
+      color: $clr-mandarin;
+      padding: 10px 40px;
+    }
+  }
+}
