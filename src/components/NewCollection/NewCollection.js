@@ -52,7 +52,6 @@ const NewCollection = () => {
                 <ul className="nav__list">
                     <Link to="/"><img src={arrow} alt="Info icon"/></Link>
                     <li className="title">New collection</li>
-
                 </ul>
             </nav>
             <form className="form" onSubmit={handleSubmit}>
@@ -65,7 +64,7 @@ const NewCollection = () => {
                     <label htmlFor="collection-title">Set title</label>
                 </div>
 
-                <button className="ok btn btn--lg" type="submit" on>Save </button>
+                <button className="ok btn btn--lg" type="submit">Save</button>
             </form>
         </div>
     );

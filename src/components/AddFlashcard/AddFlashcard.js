@@ -15,7 +15,10 @@ const AddFlashcard = ( {match}) => {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        const docRef = db.collection("flashcards-collection").doc(match.params.id);
+        const docRef =
+            db
+            .collection("flashcards-collection")
+            .doc(match.params.id);
 
         docRef.update({
             cards: firebase.firestore.FieldValue.arrayUnion({front, back})
@@ -38,7 +41,7 @@ const AddFlashcard = ( {match}) => {
         <>
             <nav className="nav">
                 <ul className="nav__list">
-                    <Link to="/"><img src={arrow} alt="Info icon"/></Link>
+                    <Link to={`/set/${match.params.id}`}><img src={arrow} alt="Info icon"/></Link>
                     <li className="title">New Flashcard</li>
                 </ul>
             </nav>

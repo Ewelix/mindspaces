@@ -79,7 +79,7 @@ const UpdateProfile = () => {
                         </div>}
                         <button disabled={loading} className="btn btn--lg">Update</button>
                     </form>
-                    <Link to="/account">Cancel</Link>
+                    <Link to="/account" className="auth__link">Cancel</Link>
                 </div>
             </div>
         </>

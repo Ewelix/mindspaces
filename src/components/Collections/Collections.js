@@ -8,18 +8,21 @@ const Collections = () => {
     const [cardTitles, setCardTitles] = useState([]);
 
     useEffect(() => {
-        db.collection("flashcards-collection").onSnapshot((snapshot) => {
-            setCardTitles(
-                snapshot.docs.map((doc) => ({
-                    id: doc.id,
-                    title: doc.data().title,
-                }))
-            );
+        db
+            .collection("flashcards-collection")
+            .onSnapshot((snapshot) => {
+                setCardTitles(
+                    snapshot.docs.map((doc) => ({
+                        id: doc.id,
+                        title: doc.data().title,
+                    }))
+                );
         });
     }, []);
 
     const handleRemove = (id) => {
-        db.collection("flashcards-collection")
+        db
+            .collection("flashcards-collection")
             .doc(id)
             .delete()
             .then(function () {console.log("Value successfully remove!");})
@@ -32,7 +35,7 @@ const Collections = () => {
                     <div className="collection__single">
                         <div className="collection__card collection__card--add">
                             Add a new collection
-                            <Link to="/new-collection" className="collection__add">+</Link>
+                            <Link to="/new-collection" className="collection__add">&#43;</Link>
                         </div>
                     </div>
 
@@ -43,7 +46,7 @@ const Collections = () => {
                                         src={trash}
                                         className="collection__remove"
                                         onClick={() => handleRemove(cardTitle.id)} alt="trash icon" />
-                                    <Link to={`/set/${cardTitle.id}`}>{cardTitle.title}</Link>
+                                    <Link to={`/set/${cardTitle.id}`} className="collection__title">{cardTitle.title}</Link>
                                 </div>
                             <div className="collection__frame frame"/>
                         </div>

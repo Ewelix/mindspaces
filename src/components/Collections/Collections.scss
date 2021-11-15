@@ -36,6 +36,10 @@
     }
   }
 
+  &__title {
+    text-decoration: none;
+  }
+
   &__frame {
     width: 100%;
     border: 2px solid $clr-primary;
@@ -46,6 +50,7 @@
     padding-top: 5px;
     font-size: 2rem;
     color: $clr-mandarin;
+    text-decoration: none;
   }
 
   &__remove {
