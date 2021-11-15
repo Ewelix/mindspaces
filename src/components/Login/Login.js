@@ -54,10 +54,10 @@ const Login = () => {
                             <img src={info} alt="Info icon"/>
                             <span>{error}</span>
                         </div>}
-                        <Link to="/forgot-password">Forgot Password?</Link>
+                        <Link to="/forgot-password" className="auth__reminder">Forgot Password?</Link>
                         <button disabled={loading} className="btn btn--lg">Log in</button>
                     </form>
-                    <div>Need an account? <Link to="/signup">Sign up</Link></div>
+                    <div className="auth__footer">Need an account? <Link to="/signup" className="auth__link">Sign up</Link></div>
                 </div>
             </div>
         </>

@@ -14,10 +14,12 @@
 
 .auth {
   max-width: 400px;
-  margin: 40px auto 0;
-  padding: 20px;
+  height: calc(100vh - 40px);
+  margin: auto 0;
+  padding: 35px 20px 20px;
   font-family: $main-ff;
   color: $clr-primary;
+  background: $clr-accent;
 
   &__title {
     padding: 20px 0;
@@ -63,5 +65,21 @@
   &__success {
     font-weight: 600;
     color: #077057;
+  }
+
+  &__reminder {
+    font-weight: 500;
+    color: #1960a6;
+    font-size: 0.9375rem;
+  }
+  
+  &__footer {
+    text-align: center;
+  }
+  
+  &__link {
+    font-weight: 600;
+    color: #b8613a;
+    text-align: center;
   }
 }
