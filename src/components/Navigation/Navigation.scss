@@ -27,4 +27,11 @@ body {
   img {
     max-width: 20px;
   }
+
+  &__button {
+    color: $clr-mandarin;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+  }
 }

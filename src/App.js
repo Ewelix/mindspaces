@@ -28,7 +28,7 @@ function App() {
                     <Route path="/new-collection" component={NewCollection}/>
                     <Route path="/set/:id" component={Set}/>
                     <Route path="/add-flashcard/:id" component={AddFlashcard}/>
-                    <Route path="/learning" component={Learning}/>
+                    <Route path="/learning/:id" component={Learning}/>
                 </AuthProvider>
         </HashRouter>
     </div>

@@ -1,7 +1,7 @@
 import React from 'react';
 import "./Learning.scss";
 import { Link } from "react-router-dom";
-import close from "../../images/close.png";
+import close from "../../images/close-orange.png";
 
 const Learning = ({ match }) => {
     return (
@@ -9,7 +9,7 @@ const Learning = ({ match }) => {
             <div className="learning">
                 <nav className="learning__nav nav">
                     <ul className="nav__list">
-                        <Link to="/"><img src={close} alt="Info icon"/></Link>
+                        <Link to={`/set/${match.params.id}`}><img src={close} alt="Close icon"/></Link>
                         <li className="title">12/23</li>
                     </ul>
                 </nav>
