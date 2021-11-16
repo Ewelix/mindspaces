@@ -5,8 +5,8 @@ import "./Login.scss";
 import info from "../../images/info.png";
 
 const Login = () => {
-    const emailRef = useRef('');
-    const passwordRef = useRef('');
+    const emailRef = useRef();
+    const passwordRef = useRef();
     const { login } = useAuth();
     const [error, setError] = useState('');
     const [loading, setLoading] = useState(false);

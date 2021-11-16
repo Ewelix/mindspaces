@@ -5,9 +5,9 @@ import info from "../../images/info.png";
 import { Link, useHistory } from "react-router-dom";
 
 const Signup = () => {
-    const emailRef = useRef('');
-    const passwordRef = useRef('');
-    const passwordConfirmRef = useRef('');
+    const emailRef = useRef();
+    const passwordRef = useRef();
+    const passwordConfirmRef = useRef();
     const { signup } = useAuth();
     const [error, setError] = useState('');
     const [loading, setLoading] = useState(false);
