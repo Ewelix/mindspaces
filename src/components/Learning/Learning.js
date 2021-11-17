@@ -5,6 +5,7 @@ import close from "../../images/close-orange.png";
 import arrow from "../../images/again-arrow.png";
 import check from "../../images/check(2).png";
 import Flashcard from "../Flashcard/Flashcard";
+import FinishedSetInfo from "../FinishedSetInfo/FinishedSetInfo";
 
 const Learning = ({ match, location }) => {
     const [flashcards, setFlashcards] = useState(location.state.flashcards);
@@ -12,9 +13,12 @@ const Learning = ({ match, location }) => {
     const [currentCard, setCurrentCard] = useState(1);
     const [currentCardIndex, setCurrentCardIndex] = useState(0);
     const [needsPracticeCategory, setNeedsPracticeCategory] = useState([]);
+    const [isSetAvailable, setIsSetAvailable] = useState(true);
 
     const handleClick = () => {
-        if (currentCard === flashcards.length) return;
+        if (currentCard === flashcards.length) {
+            setIsSetAvailable(false);
+        }
         setCurrentCard(previousState => previousState + 1);
         setCurrentCardIndex(previousState => previousState + 1);
     }
@@ -26,8 +30,6 @@ const Learning = ({ match, location }) => {
             [...previousState, flashcards[currentCardIndex]]
         ))
     }
-
-    // console.log(needsPracticeCategory);
 
     const handleSuccessClick = (e) => {
         e.preventDefault();
@@ -51,8 +53,9 @@ const Learning = ({ match, location }) => {
                         <div className={`learning__card ${cardReverse ? 'reverse' : ''}`}
                              onClick={() => setCardReverse(!cardReverse)}>
                             <div className="learning__counter">{currentCard > 0 ? currentCard : ''}/{flashcards.length}</div>
-                            {flashcards.length && <Flashcard flashcard={flashcards[currentCardIndex]}/>}
-                            {/*{currentCard === 0 && <h5>Congrats! You already know everything!</h5>}*/}
+                            {isSetAvailable
+                                ? <Flashcard flashcard={flashcards[currentCardIndex]}/>
+                                : <FinishedSetInfo needsPracticeCategory={needsPracticeCategory}/>}
                         </div>
                         <div className="learning__frame frame"/>
                     </div>
