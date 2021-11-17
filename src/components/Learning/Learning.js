@@ -1,4 +1,4 @@
-import React, {useRef, useState} from 'react';
+import React, {useRef, useState, useEffect} from 'react';
 import "./Learning.scss";
 import { Link } from "react-router-dom";
 import close from "../../images/close-orange.png";
@@ -6,16 +6,17 @@ import arrow from "../../images/again-arrow.png";
 import check from "../../images/check(2).png";
 import Flashcard from "../Flashcard/Flashcard";
 
-const Learning = ({match, location}) => {
-    const [front, setFront] = useState('What is DOM');
-    const [back, setBack] = useState('Document Object Model');
+const Learning = ({ match, location }) => {
+    const [flashcards, setFlashcards] = useState(location.state.flashcards);
     const [cardReverse, setCardReverse] = useState(false);
-    const [flashcards, setLoc] = useState(location.state.flashcards);
+    const [currentCard, setCurrentCard] = useState(1);
 
-    const currentCard = useRef(0);
-    // console.log(currentCard);
+    const handleClick = (e) => {
+        e.preventDefault();
 
-    console.log('fiszki learning', flashcards);
+        if (currentCard === flashcards.length) return;
+        setCurrentCard(previousState => previousState + 1);
+    }
 
     return (
         <>
@@ -33,17 +34,21 @@ const Learning = ({match, location}) => {
                     <div className="learning__single">
                         <div className={`learning__card ${cardReverse ? 'reverse' : ''}`}
                              onClick={() => setCardReverse(!cardReverse)}>
-                            <div className="learning__counter">/{flashcards.length}</div>
-                            {flashcards.length && <Flashcard flashcard={flashcards[0]}/>}
+                            <div className="learning__counter">{currentCard}/{flashcards.length}</div>
+                            {flashcards.length && <Flashcard flashcard={flashcards[currentCard - 1]}/>}
                         </div>
                         <div className="learning__frame frame"/>
                     </div>
                     <div className="learning__buttons">
                         {/*needs practice learned*/}
-                        <a href="#" className="learning__button">
+                        <a href="#"
+                           className="learning__button"
+                            onClick={handleClick}>
                             <img src={arrow} alt=""/>
                         </a>
-                        <a href="#" className="learning__button">
+                        <a href="#"
+                           className="learning__button"
+                           onClick={handleClick}>
                             <img src={check} alt=""/>
                             </a>
                     </div>
