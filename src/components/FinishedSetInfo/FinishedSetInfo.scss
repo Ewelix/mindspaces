@@ -1,0 +1,26 @@
+@import '../../sassStyles/colors';
+@import '../../sassStyles/typography';
+@import '../../sassStyles/base';
+
+.info {
+  flex-grow: 1;
+  align-items: center;
+  padding: 15px;
+
+  h4 {
+    padding: 20px 0 50px;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+  }
+
+  a {
+    display: block;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    color: $clr-primary;
+    text-transform: uppercase;
+    border: 2px solid $clr-primary;
+    text-decoration: none;
+  }
+}

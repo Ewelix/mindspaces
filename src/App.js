@@ -29,6 +29,7 @@ function App() {
                     <Route path="/set/:id" component={Set}/>
                     <Route path="/add-flashcard/:id" component={AddFlashcard}/>
                     <Route path="/learning/:id" component={Learning}/>
+                    {/*<Route path="/learning/:id" component={Learning}/>*/}
                 </AuthProvider>
         </HashRouter>
     </div>

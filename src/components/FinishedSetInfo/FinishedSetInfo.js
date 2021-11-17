@@ -1,19 +1,20 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import "./FinishedSetInfo.scss";
 
-const FinishedSetInfo = ({needsPracticeCategory}) => {
+const FinishedSetInfo = ({needsPracticeCategory, match}) => {
 
     return (
             <div className="info">
                 {needsPracticeCategory.length &&
                     <>
                         <h4>Continue learning to master {needsPracticeCategory.length} cards that needs practice.</h4>
-                        <a href="">continue learning</a> or
-                        <a href=""> start from beginning</a>
+                        <a href="">continue learning</a>
+                        <Link> start from beginning</Link>
                     </>}
                 {needsPracticeCategory.length === 0 &&
                     <>
-                        <div>Congrats! You are familiar with this learning set!</div>
+                        <h4>Congrats! You are familiar with this learning set!</h4>
                         <a href="">LEARN AGAIN</a>
                     </>}
             </div>
