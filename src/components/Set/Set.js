@@ -6,11 +6,13 @@ import firebase from "firebase";
 import "./Set.scss";
 import trash from "./../../images/delete.png";
 import arrow from "../../images/left-arrow.png";
+import Flashcard from "../Flashcard/Flashcard";
 
 const Set = ({ match }) => {
     const [cardFronts, setCardFronts] = useState([]);
     const [front, setFront] = useState('');
     const [back, setBack] = useState('');
+    const [flashcards, setFlashcards] = useState([]);
 
     const docRef = db
         .collection("flashcards-collection")
@@ -21,7 +23,7 @@ const Set = ({ match }) => {
             .get()
             .then((doc) => {
                 if (doc.exists) {
-                    setCardFronts((state) => [
+                    setFlashcards((state) => [
                             ...state, ...doc.data().cards
                             ])
                 } else {
@@ -48,8 +50,13 @@ const Set = ({ match }) => {
                 <ul className="nav__list">
                     <Link to="/"><img src={arrow} alt="Info icon"/></Link>
                     <Link
-                        to={`/learning/${match.params.id}`}
-                        className="nav__button">Start learning</Link>
+                        to={{
+                        pathname: `/learning/${match.params.id}`,
+                        state: {
+                            flashcards: flashcards
+                        }
+                    }}
+                        className="nav__button" flashcards={flashcards}>Start learning</Link>
                 </ul>
             </nav>
             <div className="collection">
@@ -60,7 +67,8 @@ const Set = ({ match }) => {
                     </div>
                 </div>
 
-                {cardFronts.length && cardFronts.map((card, i) => {
+                {flashcards.length && flashcards.map((flashcard, i) => {
+                    // console.log(flashcard);
                     return <div className="collection__single" key={i}>
                                 <div className="collection__card">
                                     <img
@@ -68,7 +76,9 @@ const Set = ({ match }) => {
                                         className="collection__remove"
                                         alt="trash icon"
                                         onClick={() => handleRemove(i)}/>
-                                    <div className="collection__title">{card.front}</div>
+                                    <div className="collection__title">
+                                        <Flashcard flashcard={flashcard}/>
+                                    </div>
                                 </div>
                             <div className="collection__frame frame"/>
                         </div>
