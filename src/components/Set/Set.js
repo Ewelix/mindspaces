@@ -22,10 +22,7 @@ const Set = ({ match }) => {
             .then((doc) => {
                 if (doc.exists) {
                     setCardFronts((state) => [
-                                ...state,
-                                {
-                                    ...doc.data(),
-                                }
+                            ...state, ...doc.data().cards
                             ])
                 } else {
                     console.log("No such document!");
@@ -63,7 +60,7 @@ const Set = ({ match }) => {
                     </div>
                 </div>
 
-                {cardFronts.length && cardFronts[0].cards.map((card, i) => {
+                {cardFronts.length && cardFronts.map((card, i) => {
                     return <div className="collection__single" key={i}>
                                 <div className="collection__card">
                                     <img

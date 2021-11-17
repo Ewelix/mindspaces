@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import "./Learning.scss";
 import { Link } from "react-router-dom";
 import close from "../../images/close-orange.png";
+import arrow from "../../images/update-arrow.png";
+import check from "../../images/check(2).png";
 
 const Learning = ({ match }) => {
     const [front, setFront] = useState('What is DOM');
@@ -31,8 +33,13 @@ const Learning = ({ match }) => {
                         <div className="learning__frame frame"/>
                     </div>
                     <div className="learning__buttons">
-                        <a href="#" className="learning__button">needs practice</a>
-                        <a href="#" className="learning__button">learned</a>
+                        {/*needs practice learned*/}
+                        <a href="#" className="learning__button">
+                            <img src={arrow} alt=""/>
+                        </a>
+                        <a href="#" className="learning__button">
+                            <img src={check} alt=""/>
+                            </a>
                     </div>
                 </div>
             </div>
