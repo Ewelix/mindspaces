@@ -67,8 +67,7 @@ const Set = ({ match }) => {
                     </div>
                 </div>
 
-                {flashcards.length && flashcards.map((flashcard, i) => {
-                    // console.log(flashcard);
+                {flashcards.length > 0 && flashcards.map((flashcard, i) => {
                     return <div className="collection__single" key={i}>
                                 <div className="collection__card">
                                     <img
