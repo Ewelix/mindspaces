@@ -15,6 +15,11 @@ const Learning = ({ match, location }) => {
     const [needsPracticeCategory, setNeedsPracticeCategory] = useState([]);
     const [isSetAvailable, setIsSetAvailable] = useState(true);
 
+    const handleFlipClick = () => {
+        if (!isSetAvailable) return;
+        setCardReverse(!cardReverse);
+    }
+
     const handleClick = () => {
         if (currentCard === flashcards.length) {
             setIsSetAvailable(false);
@@ -26,6 +31,8 @@ const Learning = ({ match, location }) => {
 
     const handleAgainClick = (e) => {
         e.preventDefault();
+        if (!isSetAvailable) return;
+
         handleClick();
         setNeedsPracticeCategory((previousState) => (
             [...previousState, flashcards[currentCardIndex]]
@@ -34,6 +41,8 @@ const Learning = ({ match, location }) => {
 
     const handleSuccessClick = (e) => {
         e.preventDefault();
+        if (!isSetAvailable) return;
+
         handleClick();
     }
 
@@ -49,10 +58,10 @@ const Learning = ({ match, location }) => {
                     </ul>
                 </nav>
                 <div className="learning__set">
-                    <p className="learning__instruction">Tap card to flip it!</p>
+                    {isSetAvailable && <p className="learning__instruction">Tap card to flip it!</p>}
                     <div className="learning__single">
                         <div className={`learning__card ${cardReverse ? 'reverse' : ''}`}
-                             onClick={() => setCardReverse(!cardReverse)}>
+                             onClick={handleFlipClick}>
                             <div className="learning__counter">
                                 {isSetAvailable ? currentCard : flashcards.length}/{flashcards.length}
                             </div>
