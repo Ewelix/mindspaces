@@ -28,6 +28,7 @@
   &__single {
     position: relative;
     flex-basis: 90%;
+    max-width: 300px;
     min-height: 400px;
 
     &.reverse {
