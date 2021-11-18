@@ -19,6 +19,7 @@ const Learning = ({ match, location }) => {
         if (currentCard === flashcards.length) {
             setIsSetAvailable(false);
         }
+
         setCurrentCard(previousState => previousState + 1);
         setCurrentCardIndex(previousState => previousState + 1);
     }
@@ -52,7 +53,9 @@ const Learning = ({ match, location }) => {
                     <div className="learning__single">
                         <div className={`learning__card ${cardReverse ? 'reverse' : ''}`}
                              onClick={() => setCardReverse(!cardReverse)}>
-                            <div className="learning__counter">{currentCard > 0 ? currentCard : ''}/{flashcards.length}</div>
+                            <div className="learning__counter">
+                                {isSetAvailable ? currentCard : flashcards.length}/{flashcards.length}
+                            </div>
                             {isSetAvailable
                                 ? <Flashcard flashcard={flashcards[currentCardIndex]}/>
                                 : <FinishedSetInfo needsPracticeCategory={needsPracticeCategory}/>}
