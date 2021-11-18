@@ -57,8 +57,8 @@ const Learning = ({ match, location }) => {
                         <li className="title">Learning</li>
                     </ul>
                 </nav>
-                <div className="learning__set">
-                    {isSetAvailable && <p className="learning__instruction">Tap card to flip it!</p>}
+                <div className={`learning__set ${!isSetAvailable? 'finished' : ''}`}>
+                    <p className="learning__instruction">Tap card to flip it!</p>}
                     <div className="learning__single">
                         <div className={`learning__card ${cardReverse ? 'reverse' : ''}`}
                              onClick={handleFlipClick}>

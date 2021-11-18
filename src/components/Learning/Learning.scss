@@ -136,4 +136,14 @@
       margin-left: 40px;
     }
   }
+  
+  .finished {
+    .learning__instruction {
+      display: none;
+    }
+
+    .learning__counter {
+      display: none;
+    }
+  }
 }

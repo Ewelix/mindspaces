@@ -5,14 +5,18 @@
 .info {
   flex-grow: 1;
   align-items: center;
-  padding: 15px 25px;
+  padding: 13% 25px 0;
   //background: #c9bfd9;
-  background: #EDDEA4;
+  //background: #EDDEA4;
+  background: $clr-blue;
+  color: #fff;
+  font-weight: 400;
 
   h4 {
     padding: 20px 0 50px;
     font-size: 1.3rem;
     line-height: 1.9rem;
+    font-weight: 400;
   }
 
   a {
@@ -20,9 +24,14 @@
     padding: 10px 15px;
     margin-bottom: 10px;
     font-size: 1.2rem;
-    color: $clr-primary;
-    text-transform: uppercase;
+    color: #fff;
+    text-transform: lowercase;
     border: 2px solid $clr-primary;
     text-decoration: none;
+    background: $clr-primary;
   }
+}
+
+.info + .learning__counter {
+  border: 3px solid red;
 }
