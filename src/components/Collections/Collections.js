@@ -3,13 +3,16 @@ import { Link } from "react-router-dom";
 import "./Collections.scss";
 import trash from "./../../images/delete.png";
 import  { db } from "../../firebase";
+import { useAuth } from "../../contexts/AuthContext";
 
 const Collections = () => {
     const [cardTitles, setCardTitles] = useState([]);
+    const { currentUser } = useAuth();
 
     useEffect(() => {
         db
             .collection("flashcards-collection")
+            .where('userId', '==', currentUser.uid)
             .onSnapshot((snapshot) => {
                 setCardTitles(
                     snapshot.docs.map((doc) => ({
@@ -39,7 +42,7 @@ const Collections = () => {
                         </div>
                     </div>
 
-                {cardTitles.map(cardTitle => {
+                {cardTitles.length > 0 && cardTitles.map(cardTitle => {
                     return <div className="collection__single" key={cardTitle.id}>
                                 <div className="collection__card">
                                     <img

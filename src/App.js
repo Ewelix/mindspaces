@@ -16,20 +16,20 @@ function App() {
   return (
     <div className="App">
         <Router>
-                <AuthProvider>
-                    <Switch>
-                        <PrivateRoute exact path="/" component={Dashboard}/>
-                        <PrivateRoute path="/update-profile" component={UpdateProfile}/>
-                        <Route path="/signup" component={Signup}/>
-                        <Route path="/login" component={Login}/>
-                        <PrivateRoute path="/account" component={Account}/>
-                        <Route path="/forgot-password" component={ForgotPassword}/>
-                        <Route path="/new-collection" component={NewCollection}/>
-                        <Route path="/set/:id" component={Set}/>
-                        <Route path="/add-flashcard/:id" component={AddFlashcard}/>
-                        <Route path="/learning/:id" component={Learning}/>
-                    </Switch>
-                </AuthProvider>
+            <AuthProvider>
+                <Switch>
+                    <PrivateRoute exact path="/" component={Dashboard}/>
+                    <PrivateRoute path="/update-profile" component={UpdateProfile}/>
+                    <Route path="/signup" component={Signup}/>
+                    <Route path="/login" component={Login}/>
+                    <PrivateRoute path="/account" component={Account}/>
+                    <Route path="/forgot-password" component={ForgotPassword}/>
+                    <Route path="/new-collection" component={NewCollection}/>
+                    <Route path="/set/:id" component={Set}/>
+                    <Route path="/add-flashcard/:id" component={AddFlashcard}/>
+                    <Route path="/learning/:id" component={Learning}/>
+                </Switch>
+            </AuthProvider>
         </Router>
     </div>
   );

@@ -3,47 +3,29 @@ import "./NewCollection.scss";
 import { Link, useHistory } from "react-router-dom";
 import arrow from "../../images/left-arrow.png";
 import  { db } from "../../firebase";
+import { useAuth } from "../../contexts/AuthContext";
 
 const NewCollection = () => {
     const [collectionTitle, setCollectionTitle] = useState('');
-
-    //pojedyncza karta
-    const [card, setCard] = useState({});
-
-    // cala kolekcja
-    const [cards, setCards] = useState([]);
-
-    const [error, setError] =useState('');
-
+    const { currentUser } = useAuth();
     const history = useHistory();
-
-
-    const handleClick = () => {
-        console.log('klik');
-        // return <Card/>
-    //    1. wyslanie danych do cards
-    //    2. wyswietlenie nowej czystej karty
-    }
 
     const handleSubmit = (e) => {
         e.preventDefault();
 
         if (collectionTitle === "") return;
 
-        // wysylam dane
-
         db.collection("flashcards-collection")
             .add({
                 title: collectionTitle,
-                cards: []
+                cards: [],
+                userId: currentUser.uid,
         })
             .then(function () {console.log("Value successfully written!");})
             .catch(function (error) {console.error("Error writing Value: ", error);});
 
         setCollectionTitle("");
         history.push("/");
-
-    //    wyswietlanie nowej karty
     }
 
     return (
