@@ -3,6 +3,7 @@ import { Link, useHistory } from "react-router-dom";
 import { useAuth } from "../../contexts/AuthContext";
 import "./Login.scss";
 import info from "../../images/info.png";
+import card from "../../images/flash-card(2).png";
 
 const Login = () => {
     const emailRef = useRef();
@@ -30,6 +31,7 @@ const Login = () => {
     return (
         <>
             <div className="auth">
+                <img className="auth__img" src={card} alt=""/>
                 <div className="auth__signin">
                     <h2 className="auth__title">Log in</h2>
                     <form action="" className="login" onSubmit={handleSubmit}>

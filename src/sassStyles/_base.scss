@@ -21,11 +21,12 @@ body {
   margin: 10px 0 15px;
   padding: 10px 30px;
   //transition: background-color 250ms ease;
-  color: #fff;
-  font-weight: 500;
+  color: $clr-primary;
+  font-weight: 600;
   font-size: 1rem;
-  background: $clr-primary;
-  border: 2px solid $clr-primary;
+  //background: $clr-primary;
+  background: $clr-accent;
+  border: 2px solid $clr-accent;
 }
 
 .btn--lg {

@@ -45,6 +45,7 @@ const AddFlashcard = ( {match}) => {
                     <li className="title">New Flashcard</li>
                 </ul>
             </nav>
+            <h5 className="title">Add a new flashcard</h5>
             <form className="form form__card" onSubmit={handleSubmit}>
                 <div className="form__container">
                     <div className="form__row">

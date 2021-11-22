@@ -29,7 +29,7 @@ const NewCollection = () => {
     }
 
     return (
-        <div>
+        <>
             <nav className="nav">
                 <ul className="nav__list">
                     <Link to="/"><img src={arrow} alt="Info icon"/></Link>
@@ -48,7 +48,7 @@ const NewCollection = () => {
 
                 <button className="ok btn btn--lg" type="submit">Save</button>
             </form>
-        </div>
+        </>
     );
 };
 

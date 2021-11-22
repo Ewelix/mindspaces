@@ -2,6 +2,8 @@ import React, { useRef, useState } from 'react';
 import { useAuth } from "../../contexts/AuthContext";
 import "./Signup.scss";
 import info from "../../images/info.png";
+// import card from "../../images/flash-card.png";
+import card from "../../images/flash-card(2).png";
 import { Link, useHistory } from "react-router-dom";
 
 const Signup = () => {
@@ -34,6 +36,7 @@ const Signup = () => {
     return (
         <>
             <div className="auth">
+                <img className="auth__img" src={card} alt=""/>
                 <div className="auth__signup">
                     <h2 className="auth__title">Sign up</h2>
                     <form action="" className="signup" onSubmit={handleSubmit}>

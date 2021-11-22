@@ -70,11 +70,11 @@ const Set = ({ match }) => {
                 {flashcards.length > 0 && flashcards.map((flashcard, i) => {
                     return <div className="collection__single" key={i}>
                                 <div className="collection__card">
-                                    <img
-                                        src={trash}
-                                        className="collection__remove"
-                                        alt="trash icon"
-                                        onClick={() => handleRemove(i)}/>
+                                    {/*<img*/}
+                                    {/*    src={trash}*/}
+                                    {/*    className="collection__remove"*/}
+                                    {/*    alt="trash icon"*/}
+                                    {/*    onClick={() => handleRemove(i)}/>*/}
                                     <div className="collection__title">
                                         <Flashcard flashcard={flashcard}/>
                                     </div>

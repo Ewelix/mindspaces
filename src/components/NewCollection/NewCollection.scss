@@ -1,6 +1,7 @@
 @import '../../sassStyles/colors';
 @import '../../sassStyles/typography';
 @import '../../sassStyles/base';
+@import '../../sassStyles/variables';
 
 body {
   background: $clr-accent;
@@ -12,6 +13,8 @@ body {
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    max-width: $content-width;
+    margin: 0 auto;
     list-style: none;
   }
 
@@ -27,6 +30,7 @@ body {
 }
 
 .form {
+  max-width: $content-width;
   width: 90%;
   margin: 30px auto 0;
   padding: 20px;

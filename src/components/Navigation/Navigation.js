@@ -24,18 +24,20 @@ const Navigation = () => {
 
     return (
         <nav className="nav">
-            <Link to="/account">
-                <img src={user} className="App-logo" alt="logo" />
-            </Link>
-            {error && <div className="auth__error">
-                <img src={info} alt="Info icon"/>
-                <span>{error}</span>
-            </div>}
-            <h4 className="nav__title">Collections</h4>
-            {/*<h1 className="nav__title title">Your collections</h1>*/}
-            <a href="/" onClick={handleLogout}>
-                <img src={leave} className="App-logo" alt="logo" />
-            </a>
+            <ul className="nav__list">
+                <Link to="/account">
+                    <img src={user} className="App-logo" alt="logo" />
+                </Link>
+                {error && <div className="auth__error">
+                    <img src={info} alt="Info icon"/>
+                    <span>{error}</span>
+                </div>}
+                <h4 className="nav__title">Collections</h4>
+                {/*<h1 className="nav__title title">Your collections</h1>*/}
+                <a href="/" onClick={handleLogout}>
+                    <img src={leave} className="App-logo" alt="logo" />
+                </a>
+            </ul>
         </nav>
     );
 };

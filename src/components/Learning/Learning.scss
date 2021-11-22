@@ -94,8 +94,10 @@
   }
 
   &__instruction {
+    flex-basis: 100%;
     color: #adadad;
     font-size: 1.1rem;
+    text-align: center;
   }
 
   &__title {

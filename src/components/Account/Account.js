@@ -11,11 +11,13 @@ const Account = () => {
     return (
         <>
             <nav className="nav">
-                <Link to="/account">
-                    <img src={user} alt="User icon" />
-                </Link>
-                <h4 className="nav__title">Account</h4>
-                <Link to="/"><img src={close} alt="Info icon"/></Link>
+                <ul className="nav__list">
+                    <Link to="/account">
+                        <img src={user} alt="User icon" />
+                    </Link>
+                    <h4 className="nav__title">Account</h4>
+                    <Link to="/"><img src={close} alt="Info icon"/></Link>
+                </ul>
             </nav>
             <section className="account">
                 <div className="account__container">

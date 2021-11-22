@@ -46,6 +46,10 @@ const Learning = ({ match, location }) => {
         handleClick();
     }
 
+    const learnAgain = () => {
+        setIsSetAvailable(!isSetAvailable);
+    }
+
     return (
         <>
             <div className="learning">
@@ -67,7 +71,7 @@ const Learning = ({ match, location }) => {
                             </div>
                             {isSetAvailable
                                 ? <Flashcard flashcard={flashcards[currentCardIndex]}/>
-                                : <FinishedSetInfo needsPracticeCategory={needsPracticeCategory}/>}
+                                : <FinishedSetInfo needsPracticeCategory={needsPracticeCategory} learnAgain={learnAgain}/>}
                         </div>
                         <div className="learning__frame frame"/>
                     </div>

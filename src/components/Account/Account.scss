@@ -2,13 +2,10 @@
 @import '../../sassStyles/typography';
 @import '../../sassStyles/base';
 
-body {
-  //background-color: $main-bgc !important;
-}
-
 .account {
   position: relative;
-
+  max-width: $content-width;
+  margin: 0 auto;
 
   &__container {
     position: relative;
