@@ -71,7 +71,7 @@ const Signup = () => {
                         </div>}
                         <button disabled={loading} className="btn btn--lg">Sign up</button>
                     </form>
-                    <div className="auth__footer">Already have an account? <Link to="/login" className="auth__link">Log in</Link></div>
+                    <div className="auth__footer">Already have an account? <Link to="/login" className="auth__link link">Log in</Link></div>
                 </div>
             </div>
         </>

@@ -61,10 +61,10 @@ const Learning = ({ match, location }) => {
                         <li className="title">Learning</li>
                     </ul>
                 </nav>
-                <div className={`learning__set ${!isSetAvailable? 'finished' : ''}`}>
-                    <p className="learning__instruction">Tap card to flip it!</p>}
+                <div className={`learning__set ${!isSetAvailable ? 'finished' : ''}`}>
+                    <p className="learning__instruction">Tap card to flip it!</p>
                     <div className="learning__single">
-                        <div className={`learning__card ${cardReverse ? 'reverse' : ''}`}
+                        <div className={`learning__card ${cardReverse && isSetAvailable ? 'reverse' : ''}`}
                              onClick={handleFlipClick}>
                             <div className="learning__counter">
                                 {isSetAvailable ? currentCard : flashcards.length}/{flashcards.length}

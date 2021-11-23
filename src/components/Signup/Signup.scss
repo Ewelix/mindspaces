@@ -36,7 +36,7 @@
     padding: 10px;
     font-family: $main-ff;
     font-size: 0.75rem;
-    border: 2px solid $clr-primary;
+    border: 1px solid $clr-primary;
   }
 
   label {
@@ -76,7 +76,7 @@
 
   &__reminder {
     font-weight: 500;
-    color: #1960a6;
+    color: #FA824C;
     font-size: 0.9375rem;
   }
   
@@ -84,10 +84,10 @@
     font-size: 15px;
     text-align: center;
   }
-  
+
   &__link {
     font-weight: 600;
-    color: #b8613a;
+    color: $clr-mandarin;
     text-align: center;
   }
 }

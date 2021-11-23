@@ -51,8 +51,8 @@ const ForgotPassword = () => {
                         </div>}
                         <button disabled={loading} className="btn btn--lg">Reset Password</button>
                     </form>
-                    <Link to="/login">Log in</Link>
-                    <div>Need an account? <Link to="/signup">Sign up</Link></div>
+                    <Link to="/login" className="auth__link link">Log in</Link>
+                    <div className="auth__footer">Need an account? <Link to="/signup" className="auth__link link">Sign up</Link></div>
                 </div>
             </div>
         </>
