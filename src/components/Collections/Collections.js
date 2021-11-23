@@ -33,7 +33,7 @@ const Collections = () => {
     }
 
     return (
-        <>
+        <div className="collections">
             <div className="collection">
                     <div className="collection__single">
                         <div className="collection__card collection__card--add">
@@ -55,7 +55,7 @@ const Collections = () => {
                         </div>
                     })}
             </div>
-        </>
+        </div>
     );
 };
 

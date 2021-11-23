@@ -46,7 +46,7 @@
     max-width: 167px;
     width: 100%;
     border: 2px solid $clr-primary;
-    background-color: $clr-mandarin;
+    background: #fff;
   }
 
   &__add {
@@ -62,4 +62,9 @@
     right: 10px;
     width: 22px;
   }
+}
+
+.collections {
+  height: 100%;
+  background: $clr-accent;
 }

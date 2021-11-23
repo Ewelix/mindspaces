@@ -45,7 +45,7 @@ const Set = ({ match }) => {
     }
 
     return (
-        <>
+        <div className="set">
             <nav className="nav">
                 <ul className="nav__list">
                     <Link to="/"><img src={arrow} alt="Info icon"/></Link>
@@ -83,7 +83,7 @@ const Set = ({ match }) => {
                         </div>
                 })}
             </div>
-        </>
+        </div>
     );
 };
 

@@ -34,7 +34,12 @@
     margin: 20px 0;
     text-decoration: none;
     text-align: center;
-    background: $clr-accent;
+
+    &.btn {
+      color: #fff;
+      background: $clr-primary;
+      border: 1px solid $clr-primary;
+    }
   }
 
   &__frame {

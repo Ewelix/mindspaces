@@ -17,16 +17,6 @@ body {
     margin: 0 auto;
     list-style: none;
   }
-
-  .ok {
-    padding: 5px 20px;
-    font-size: 1.3rem;
-    color: $clr-primary;
-    font-weight: 900;
-    letter-spacing: 1px;
-    background: $clr-mandarin;
-    border: 2px solid $clr-primary;
-  }
 }
 
 .form {
@@ -83,5 +73,19 @@ body {
     text-decoration: none;
     background: $clr-primary;
 
+  }
+}
+
+.ok {
+  padding: 5px 20px;
+  font-size: 1.3rem;
+  color: #fff;
+  font-weight: 900;
+  letter-spacing: 1px;
+  background: $clr-primary;
+  border: 2px solid $clr-primary;
+
+  &.btn {
+    background: $clr-primary;
   }
 }

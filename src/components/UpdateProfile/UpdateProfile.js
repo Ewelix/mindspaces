@@ -77,7 +77,7 @@ const UpdateProfile = () => {
                             <img src={info} alt="Info icon"/>
                             <span>{error}</span>
                         </div>}
-                        <button disabled={loading} className="btn btn--lg">Update</button>
+                        <button disabled={loading} className="auth__btn btn btn--lg">Update</button>
                     </form>
                     <Link to="/account" className="auth__link">Cancel</Link>
                 </div>

@@ -38,14 +38,14 @@ const NewCollection = () => {
             </nav>
             <form className="form" onSubmit={handleSubmit}>
                 <div className="form__intro">
+                    <label htmlFor="collection-title">Set a title for a new collection</label>
                     <input
                         type="text"
                         id="collection-title"
                         value={collectionTitle}
+                        placeholder="Collection title"
                         onChange={(e) => setCollectionTitle(e.target.value)}/>
-                    <label htmlFor="collection-title">Set title</label>
                 </div>
-
                 <button className="ok btn btn--lg" type="submit">Save</button>
             </form>
         </>

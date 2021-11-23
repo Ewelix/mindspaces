@@ -1,0 +1,10 @@
+@import '../../sassStyles/colors';
+
+.set {
+  background: $clr-blue;
+
+  .collection__frame {
+    border: 2px solid $clr-primary;
+    background-color: $clr-mandarin;
+  }
+}
