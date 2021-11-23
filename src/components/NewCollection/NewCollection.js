@@ -29,7 +29,7 @@ const NewCollection = () => {
     }
 
     return (
-        <>
+        <div className="new-collection">
             <nav className="nav">
                 <ul className="nav__list">
                     <Link to="/"><img src={arrow} alt="Info icon"/></Link>
@@ -38,17 +38,17 @@ const NewCollection = () => {
             </nav>
             <form className="form" onSubmit={handleSubmit}>
                 <div className="form__intro">
-                    <label htmlFor="collection-title">Set a title for a new collection</label>
+                    <label htmlFor="collection-title">
+                        Set a title for a new collection</label>
                     <input
                         type="text"
                         id="collection-title"
                         value={collectionTitle}
-                        placeholder="Collection title"
                         onChange={(e) => setCollectionTitle(e.target.value)}/>
                 </div>
                 <button className="ok btn btn--lg" type="submit">Save</button>
             </form>
-        </>
+        </div>
     );
 };
 
