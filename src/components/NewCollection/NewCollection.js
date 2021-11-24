@@ -45,7 +45,8 @@ const NewCollection = () => {
                         id="collection-title"
                         value={collectionTitle}
                         placeholder="Title"
-                        onChange={(e) => setCollectionTitle(e.target.value)}/>
+                        onChange={(e) => setCollectionTitle(e.target.value)}
+                        required/>
                 </div>
                 <button className="ok btn btn--lg" type="submit">Save</button>
             </form>

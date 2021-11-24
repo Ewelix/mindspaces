@@ -72,6 +72,10 @@
     color: $clr-primary;
     background: $clr-mandarin;
     border: 2px solid $clr-mandarin;
+
+    &:hover {
+      box-shadow: -5px 5px 0 $clr-accent;
+    }
   }
 
   &__success {

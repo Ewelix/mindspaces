@@ -54,6 +54,7 @@ const AddFlashcard = ( {match}) => {
                             id="collection-concept"
                             className="form__concept"
                             onChange={(e) => setFront(e.target.value)}
+                            required
                             />
                         <label htmlFor="collection-concept">front</label>
                     </div>
@@ -63,6 +64,7 @@ const AddFlashcard = ( {match}) => {
                             id="collection-definition"
                             className="form__concept"
                             onChange={(e) => setBack(e.target.value)}
+                            required
                         />
                         <label htmlFor="collection-definition">back</label>
                     </div>

@@ -84,6 +84,10 @@ body {
   letter-spacing: 1px;
   background: $clr-primary;
   border: 2px solid $clr-primary;
+
+  &:hover {
+    box-shadow: -5px 5px 0 $clr-accent;
+  }
 }
 
 .new-collection {

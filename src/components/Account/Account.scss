@@ -44,6 +44,10 @@
       color: #fff;
       background: $clr-primary;
       border: 1px solid $clr-primary;
+
+      &:hover {
+        box-shadow: -5px 5px 0 $clr-accent;
+      }
     }
   }
 

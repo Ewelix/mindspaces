@@ -28,11 +28,9 @@ body {
   cursor: pointer;
   opacity: 1;
 
-  &:visited,
-  &:hover,
-  &:active {
+  &:hover {
     transition: 0.3s;
-    opacity: 0.9;
+    transform: translate(2px, -2px);
   }
 }
 
