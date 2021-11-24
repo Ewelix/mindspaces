@@ -1,21 +1,32 @@
 import React from 'react';
-import { Link } from "react-router-dom";
 import "./FinishedSetInfo.scss";
 
-const FinishedSetInfo = ({needsPracticeCategory, match}) => {
+
+const FinishedSetInfo = ({needsPracticeCategory, onContinue, onRestart}) => {
+    const handleContinueClick = () => {
+        if (typeof onContinue === "function"){
+            onContinue();
+        }
+    };
+
+    const handleRestartClick = () => {
+        if (typeof onRestart === "function") {
+            onRestart();
+        }
+    }
 
     return (
             <div className="info">
                 {needsPracticeCategory.length > 0 &&
                     <>
                         <h4>Continue learning to master {needsPracticeCategory.length} cards that needs practice.</h4>
-                        <a href="">Continue learning</a>
-                        <Link>Start from beginning</Link>
+                        <a className="info__btn" onClick={handleContinueClick}>Continue learning</a>
+                        <a className="info__btn" onClick={handleRestartClick}>Start from beginning</a>
                     </>}
                 {needsPracticeCategory.length === 0 &&
                     <>
                         <h4>Congrats! You are familiar with this learning set!</h4>
-                        <a href="">Learn again</a>
+                        <a className="info__btn" onClick={handleRestartClick}>Learn again</a>
                     </>}
             </div>
     );

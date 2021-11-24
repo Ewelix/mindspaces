@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Collections from "../Collections/Collections";
 import Navigation from "../Navigation/Navigation";
 import "./Dashboard.scss";

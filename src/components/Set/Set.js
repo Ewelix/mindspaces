@@ -4,14 +4,10 @@ import { db } from "../../firebase";
 import 'firebase/firestore';
 import firebase from "firebase";
 import "./Set.scss";
-import trash from "./../../images/delete.png";
 import arrow from "../../images/left-arrow.png";
 import Flashcard from "../Flashcard/Flashcard";
 
 const Set = ({ match }) => {
-    const [cardFronts, setCardFronts] = useState([]);
-    const [front, setFront] = useState('');
-    const [back, setBack] = useState('');
     const [flashcards, setFlashcards] = useState([]);
 
     const docRef = db
@@ -70,11 +66,6 @@ const Set = ({ match }) => {
                 {flashcards.length > 0 && flashcards.map((flashcard, i) => {
                     return <div className="collection__single" key={i}>
                                 <div className="collection__card">
-                                    {/*<img*/}
-                                    {/*    src={trash}*/}
-                                    {/*    className="collection__remove"*/}
-                                    {/*    alt="trash icon"*/}
-                                    {/*    onClick={() => handleRemove(i)}/>*/}
                                     <div className="collection__title">
                                         <Flashcard flashcard={flashcard}/>
                                     </div>

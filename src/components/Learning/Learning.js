@@ -50,6 +50,25 @@ const Learning = ({ match, location }) => {
         setIsSetAvailable(!isSetAvailable);
     }
 
+    const resetSet = () => {
+        setIsSetAvailable(true);
+        setCurrentCardIndex(0);
+        setCurrentCard(1);
+        setNeedsPracticeCategory([]);
+    }
+
+    const handleNeedsPractice = () => {
+        console.log('contune')
+        setFlashcards(needsPracticeCategory);
+        resetSet();
+    };
+
+    const handleLearnAgain = () => {
+        console.log('again')
+        setFlashcards(location.state.flashcards);
+        resetSet();
+    }
+
     return (
         <>
             <div className="learning">
@@ -71,7 +90,10 @@ const Learning = ({ match, location }) => {
                             </div>
                             {isSetAvailable
                                 ? <Flashcard flashcard={flashcards[currentCardIndex]}/>
-                                : <FinishedSetInfo needsPracticeCategory={needsPracticeCategory} learnAgain={learnAgain}/>}
+                                : <FinishedSetInfo needsPracticeCategory={needsPracticeCategory}
+                                                   learnAgain={learnAgain}
+                                                   onContinue={handleNeedsPractice}
+                                                   onRestart={handleLearnAgain}/>}
                         </div>
                         <div className="learning__frame frame"/>
                     </div>
