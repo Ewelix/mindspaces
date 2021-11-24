@@ -2,10 +2,6 @@
 @import '../../sassStyles/typography';
 @import '../../sassStyles/base';
 
-body {
-  background: $main-bgc;
-}
-
 .form {
   width: 90%;
   margin: 50px auto 0;
@@ -16,23 +12,15 @@ body {
   input {
     width: 100%;
     margin: 10px 0 0;
-    padding: 10px 0;
+    padding: 10px 5px;
     color: $clr-primary;
     border-bottom: 2px solid $clr-primary;
   }
 
   &__title {
-    font-size: 1.2rem;
     padding: 10px 0;
-  }
-
-  &__intro {
-    padding: 30px 0 10px;
-
-    label {
-      padding-left: 5px;
-      font-weight: 600;
-    }
+    font-size: 1.1rem;
+    text-align: center;
   }
 
   &__card {
@@ -41,6 +29,7 @@ body {
     label {
       color: $clr-primary;
       font-weight: 600;
+      font-size: 15px;
     }
   }
 
@@ -58,4 +47,9 @@ body {
     background: $clr-mandarin;
     border: 2px solid $clr-primary;
   }
+}
+
+.add-container {
+  height: 100%;
+  background: $clr-blue;
 }

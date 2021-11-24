@@ -5,10 +5,10 @@ import "./Dashboard.scss";
 
 const Dashboard = () => {
     return (
-        <>
+        <div className="collections-wrapper">
             <Navigation/>
             <Collections/>
-        </>
+        </div>
     );
 };
 

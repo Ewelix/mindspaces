@@ -4,8 +4,12 @@
   height: 100%;
   background: $clr-blue;
 
-  .collection__frame {
-    border: 2px solid $clr-primary;
-    background-color: $clr-mandarin;
+  .collection {
+    background: $clr-blue;
+
+    &__frame {
+      border: 2px solid $clr-primary;
+      background-color: $clr-mandarin;
+    }
   }
 }

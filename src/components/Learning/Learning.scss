@@ -3,7 +3,6 @@
 @import '../../sassStyles/base';
 
 .learning {
-  height: 100vh;
   background: $clr-primary;
 
   &__nav {
@@ -29,7 +28,7 @@
     position: relative;
     flex-basis: 90%;
     max-width: 300px;
-    min-height: 400px;
+    min-height: 350px;
 
     &.reverse {
       transform: rotateY(360deg);

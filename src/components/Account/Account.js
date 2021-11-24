@@ -10,27 +10,27 @@ const Account = () => {
 
     return (
         <>
-            <nav className="nav">
-                <ul className="nav__list">
-                    <Link to="/account">
-                        <img src={user} alt="User icon" />
-                    </Link>
-                    <h4 className="nav__title">Account</h4>
-                    <Link to="/"><img src={close} alt="Info icon"/></Link>
-                </ul>
-            </nav>
-            <section className="account">
-                <div className="account__container">
-                    <div className="account__title">Profile details</div>
-                    <div className="account__content">
-                        <strong>Email: </strong>
-                        {currentUser.email}
+            <div className="account">
+                <nav className="nav">
+                    <ul className="nav__list">
+                        <Link to="/account">
+                            <img src={user} alt="User icon" />
+                        </Link>
+                        <h4 className="nav__title">Account</h4>
+                        <Link to="/"><img src={close} alt="Info icon"/></Link>
+                    </ul>
+                </nav>
+                <section className="account__wrapper">
+                    <div className="account__container">
+                        <div className="account__title">Profile details</div>
+                        <div className="account__content">
+                            <strong>Email: </strong>
+                            {currentUser.email}
+                        </div>
+                        <Link to="/update-profile" className="account__btn btn">Update profile</Link>
                     </div>
-                    <Link to="/update-profile" className="account__btn btn">Update profile</Link>
-                </div>
-                <div className="account__frame frame"/>
-            </section>
-
+                </section>
+            </div>
         </>
     );
 };

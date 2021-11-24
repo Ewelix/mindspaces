@@ -38,7 +38,7 @@ const AddFlashcard = ( {match}) => {
     }
 
     return (
-        <>
+        <div className="add-container">
             <nav className="nav">
                 <ul className="nav__list">
                     <Link to={`/set/${match.params.id}`}><img src={arrow} alt="Info icon"/></Link>
@@ -69,7 +69,7 @@ const AddFlashcard = ( {match}) => {
                 </div>
                 <button className="form__add btn btn--lg">Save</button>
             </form>
-        </>
+        </div>
     );
 };
 

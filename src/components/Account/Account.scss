@@ -3,9 +3,14 @@
 @import '../../sassStyles/base';
 
 .account {
-  position: relative;
-  max-width: $content-width;
-  margin: 0 auto;
+  height: 100%;
+  background: $clr-accent;
+
+  &__wrapper {
+    position: relative;
+    max-width: $content-width;
+    margin: 0 auto;
+  }
 
   &__container {
     position: relative;
