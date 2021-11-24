@@ -58,13 +58,11 @@ const Learning = ({ match, location }) => {
     }
 
     const handleNeedsPractice = () => {
-        console.log('contune')
         setFlashcards(needsPracticeCategory);
         resetSet();
     };
 
     const handleLearnAgain = () => {
-        console.log('again')
         setFlashcards(location.state.flashcards);
         resetSet();
     }
