@@ -3,7 +3,7 @@
 
 #### This simple app makes it simple to create your own flashcards and helps you to study better!
 
-### Enjoy!
+### Try it out: https://mindspaces.herokuapp.com/
 
 ## ⚡ Demo
 
