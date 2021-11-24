@@ -44,6 +44,7 @@ const NewCollection = () => {
                         type="text"
                         id="collection-title"
                         value={collectionTitle}
+                        placeholder="Title"
                         onChange={(e) => setCollectionTitle(e.target.value)}/>
                 </div>
                 <button className="ok btn btn--lg" type="submit">Save</button>

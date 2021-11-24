@@ -59,7 +59,7 @@ const UpdateProfile = () => {
                                    required/>
                         </div>
                         <div className="signup__group">
-                            <label htmlFor="signupPassword">Password</label>
+                            <label htmlFor="signupPassword">Password (min. 6 characters)</label>
                             <input type="password"
                                    id="signupPassword"
                                    placeholder="Leave blank to keep the same"

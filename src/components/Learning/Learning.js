@@ -58,7 +58,7 @@ const Learning = ({ match, location }) => {
                         <Link to={`/set/${match.params.id}`}>
                             <img src={close} alt="Close icon"/>
                         </Link>
-                        <li className="title">Learning</li>
+                        <li className="title">Learning...</li>
                     </ul>
                 </nav>
                 <div className={`learning__set ${!isSetAvailable ? 'finished' : ''}`}>

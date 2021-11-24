@@ -1,5 +1,11 @@
 @import '../sassStyles/variables';
 
+@mixin tablet {
+  @media (min-width: 500px) {
+    @content;
+  }
+}
+
 * {
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
@@ -16,9 +22,18 @@ body {
 .btn {
   margin: 10px 0 15px;
   padding: 10px 30px;
-  //transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
   font-weight: 700;
   font-size: 1rem;
+  cursor: pointer;
+  opacity: 1;
+
+  &:visited,
+  &:hover,
+  &:active {
+    transition: 0.3s;
+    opacity: 0.9;
+  }
 }
 
 .btn--lg {
@@ -50,12 +65,17 @@ body {
 }
 
 .App {
-  max-width: 350px;
-  height: 636px;
-  margin: 40px auto;
-  border: 2px solid $clr-primary;
-  border-radius: 10px;
-  background: $clr-primary;
-  overflow-y : auto;
-  overflow-x: hidden;
+  height: 100vh;
+
+  @include tablet {
+    max-width: 350px;
+    height: 636px;
+    margin: 5% auto 0;
+    border: 2px solid $clr-primary;
+    border-radius: 10px;
+    background: $clr-primary;
+    overflow-y : auto;
+    overflow-x: hidden;
+  }
 }
+

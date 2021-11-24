@@ -49,7 +49,9 @@ const Collections = () => {
                                         src={trash}
                                         className="collection__remove"
                                         onClick={() => handleRemove(cardTitle.id)} alt="trash icon" />
-                                    <Link to={`/set/${cardTitle.id}`} className="collection__title">{cardTitle.title}</Link>
+                                    <Link to={`/set/${cardTitle.id}`} className="collection__title">
+                                        {cardTitle.title}
+                                    </Link>
                                 </div>
                             <div className="collection__frame frame"/>
                         </div>

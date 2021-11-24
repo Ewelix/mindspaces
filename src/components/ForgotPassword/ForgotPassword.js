@@ -49,10 +49,13 @@ const ForgotPassword = () => {
                             <img src={check} alt="Check icon"/>
                             <span>{message}</span>
                         </div>}
-                        <button disabled={loading} className="btn btn--lg">Reset Password</button>
+                        <button disabled={loading} className="auth__btn btn btn--lg">Reset Password</button>
                     </form>
-                    <Link to="/login" className="auth__link link">Log in</Link>
-                    <div className="auth__footer">Need an account? <Link to="/signup" className="auth__link link">Sign up</Link></div>
+
+                    <div className="auth__footer">Need an account?
+                        <Link to="/signup" className="auth__link link"> Sign up</Link> or
+                        <Link to="/login" className="auth__link link"> Log in</Link>
+                    </div>
                 </div>
             </div>
         </>

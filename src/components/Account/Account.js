@@ -27,7 +27,7 @@ const Account = () => {
                             <strong>Email: </strong>
                             {currentUser.email}
                         </div>
-                        <Link to="/update-profile" className="account__btn btn">Update profile</Link>
+                        <Link to="/update-profile" className="account__btn btn">Update</Link>
                     </div>
                 </section>
             </div>
