@@ -45,6 +45,7 @@ const NewCollection = () => {
                         id="collection-title"
                         value={collectionTitle}
                         placeholder="Title"
+                        maxLength="35"
                         onChange={(e) => setCollectionTitle(e.target.value)}
                         required/>
                 </div>

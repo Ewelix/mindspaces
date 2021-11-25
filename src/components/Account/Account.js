@@ -22,7 +22,7 @@ const Account = () => {
                 </nav>
                 <section className="account__wrapper">
                     <div className="account__container">
-                        <div className="account__title">Profile details</div>
+                        <div className="account__title">Your account details</div>
                         <div className="account__content">
                             <strong>Email: </strong>
                             {currentUser.email}

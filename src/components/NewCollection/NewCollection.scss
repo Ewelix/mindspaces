@@ -32,6 +32,11 @@ body {
     padding: 10px 5px;
     color: $clr-primary;
     border: 2px solid $clr-primary;
+
+    &:focus-visible {
+      outline: none;
+      border: 2px solid $clr-mandarin;
+    }
   }
 
   label {

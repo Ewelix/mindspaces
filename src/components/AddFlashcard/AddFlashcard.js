@@ -14,6 +14,7 @@ const AddFlashcard = ( {match}) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        if (front === "" || back === "") return;
 
         const docRef =
             db
@@ -53,6 +54,7 @@ const AddFlashcard = ( {match}) => {
                             type="text"
                             id="collection-concept"
                             className="form__concept"
+                            maxLength="60"
                             onChange={(e) => setFront(e.target.value)}
                             required
                             />
@@ -63,6 +65,7 @@ const AddFlashcard = ( {match}) => {
                             type="text"
                             id="collection-definition"
                             className="form__concept"
+                            maxLength="100"
                             onChange={(e) => setBack(e.target.value)}
                             required
                         />

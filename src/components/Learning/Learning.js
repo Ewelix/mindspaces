@@ -95,19 +95,20 @@ const Learning = ({ match, location }) => {
                         </div>
                         <div className="learning__frame frame"/>
                     </div>
-                    <div className="learning__buttons">
-                        {/*needs practice learned*/}
+                    {isSetAvailable && <div className="learning__buttons">
                         <a href="#"
-                           className="learning__button"
+                           className="learning__button tooltip bottom"
                             onClick={handleAgainClick}>
                             <img src={arrow} alt=""/>
+                            <span className="tooltip-content">Needs practice</span>
                         </a>
                         <a href="#"
-                           className="learning__button"
+                           className="learning__button tooltip bottom"
                            onClick={handleSuccessClick}>
                             <img src={check} alt=""/>
+                            <span className="tooltip-content">Learned</span>
                             </a>
-                    </div>
+                    </div>}
                 </div>
             </div>
         </>

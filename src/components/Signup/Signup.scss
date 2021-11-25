@@ -36,7 +36,12 @@
     padding: 10px;
     font-family: $main-ff;
     font-size: 0.75rem;
-    border: 1px solid $clr-primary;
+    border: 2px solid $clr-primary;
+
+    &:focus-visible {
+      outline: none;
+      border: 2px solid $clr-mandarin;
+    }
   }
 
   label {
