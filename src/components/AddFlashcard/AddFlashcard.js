@@ -65,7 +65,7 @@ const AddFlashcard = ( {match}) => {
                             type="text"
                             id="collection-definition"
                             className="form__concept"
-                            maxLength="100"
+                            maxLength="250"
                             onChange={(e) => setBack(e.target.value)}
                             required
                         />
