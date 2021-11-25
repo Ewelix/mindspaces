@@ -7,30 +7,32 @@
 
 Click the link and start learning: https://mindspaces.herokuapp.com/
 
+![demo screenshot](src/images/overview.png)
+
 ## 🐥 Functionalities
 
-* Registration & logging
+* Registration & logging in
 * Profile update
 * Password reminder
-* Creating cards collections
-* Deleting collections
+* Creating and deleting collections
 * Creating flashcards in the collections
 * Animated learning process:
     * Cards go to 2 categories: learned or needs practice.
-    * When set is finished user decides whether start learning from beginning or contuinue learning cards that still needs practice
+    * When set is finished user decides whether start learning from beginning or contuinue learning cards that still needs practice.
 
 ## ✨ Technologies
 
 * React.js with Hooks
 * React Router
 * React Context API
-* Npm package manager
+* Firebase
 * Webpack
 * Babel
 * SASS
 * CSS animations
 
 ## 🌷 Contribute
-Icons:
-* Freepik
+Icons made by:
+* Flaticon: https://www.flaticon.com
+* Freepik: https://www.freepik.com
 
